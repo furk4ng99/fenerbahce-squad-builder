@@ -3,6 +3,7 @@ import { Bebas_Neue, Roboto_Condensed, Teko } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import ClientLayout from "@/components/ClientLayout";
+import { Analytics } from "@vercel/analytics/next";
 
 
 const bebasNeue = Bebas_Neue({
@@ -80,6 +81,7 @@ export default function RootLayout({
             </footer>
           </div>
         </ClientLayout>
+        <Analytics />
       </body>
     </html>
   );
