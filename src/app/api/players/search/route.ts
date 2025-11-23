@@ -1,110 +1,86 @@
-import { NextRequest, NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
-import Papa from 'papaparse';
-import { Player, Position } from '@/types';
+import { NextRequest, NextResponse } from "next/server";
+import fs from "fs";
+import path from "path";
+import Papa from "papaparse";
+import { Player, Position } from "@/types";
 
-// Define the CSV row interface based on the file structure
-interface PlayerRow {
-    player_id: string;
-    player_name: string;
-    player_image_url: string;
-    position: string;
-    current_club_name: string;
-    citizenship: string;
-}
+// Helper to parse currency string to number
+const parseCurrency = (value: string): number => {
+    if (!value) return 0;
+    return parseFloat(value.replace(/[^0-9.-]+/g, ""));
+};
 
 // Helper to map CSV position to our Position type
-const mapPosition = (csvPosition: string): Position => {
-    const pos = csvPosition.toLowerCase();
-
-    if (pos.includes('goalkeeper')) return 'GK';
-
-    // Defenders
-    if (pos.includes('centre-back')) return 'CB';
-    if (pos.includes('left-back')) return 'LB';
-    if (pos.includes('right-back')) return 'RB';
-    if (pos.includes('defender')) return 'CB'; // Default defender
-
-    // Midfielders
-    if (pos.includes('defensive midfield')) return 'CDM';
-    if (pos.includes('attacking midfield')) return 'CAM';
-    if (pos.includes('left midfield')) return 'LM';
-    if (pos.includes('right midfield')) return 'RM';
-    if (pos.includes('central midfield') || pos.includes('midfield')) return 'CM';
-
-    // Attackers
-    if (pos.includes('left winger')) return 'LW';
-    if (pos.includes('right winger')) return 'RW';
-    if (pos.includes('centre-forward') || pos.includes('striker')) return 'ST';
-    if (pos.includes('second striker')) return 'ST'; // Treat as striker
-    if (pos.includes('attack')) return 'ST'; // Default attacker
-
-    return 'CM'; // Fallback
-};
-
-// Helper to generate a deterministic rating (since it's missing in CSV)
-const getRating = (id: string): number => {
-    const numId = parseInt(id, 10) || 0;
-    return 75 + (numId % 18); // 75-92
-};
-
-// Helper to generate a deterministic market value (in millions)
-const getValue = (id: string): number => {
-    const numId = parseInt(id, 10) || 0;
-    return 1 + (numId % 100); // 1-100M
+const mapPosition = (pos: string): Position => {
+    if (!pos) return "CM"; // Default
+    const p = pos.toUpperCase();
+    if (p.includes("GOALKEEPER")) return "GK";
+    if (p.includes("CENTRE-BACK")) return "CB";
+    if (p.includes("LEFT-BACK")) return "LB";
+    if (p.includes("RIGHT-BACK")) return "RB";
+    if (p.includes("DEFENSIVE MIDFIELD")) return "CDM";
+    if (p.includes("CENTRAL MIDFIELD")) return "CM";
+    if (p.includes("ATTACKING MIDFIELD")) return "CAM";
+    if (p.includes("LEFT WINGER")) return "LW";
+    if (p.includes("RIGHT WINGER")) return "RW";
+    if (p.includes("CENTRE-FORWARD")) return "ST";
+    if (p.includes("SECOND STRIKER")) return "ST"; // Map CF/SS to ST
+    return "CM"; // Fallback
 };
 
 export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams;
-    const query = searchParams.get('query') || '';
-    const club = searchParams.get('club') || '';
-    const limit = parseInt(searchParams.get('limit') || '50');
+    const query = searchParams.get("query")?.toLowerCase();
+    const club = searchParams.get("club")?.toLowerCase();
+    const limit = parseInt(searchParams.get("limit") || "20");
 
     try {
-        const csvPath = path.join(process.cwd(), 'src', 'data', 'FOOTBALL_DATA_ACTIVE.csv');
-        const fileContent = fs.readFileSync(csvPath, 'utf8');
+        const csvPath = path.join(process.cwd(), "src", "data", "FOOTBALL_DATA_ACTIVE.csv");
+        const fileContent = fs.readFileSync(csvPath, "utf8");
 
-        const results = await new Promise<Papa.ParseResult<PlayerRow>>((resolve) => {
-            Papa.parse(fileContent, {
-                header: true,
-                complete: resolve,
-            });
+        const results = Papa.parse(fileContent, {
+            header: true,
+            skipEmptyLines: true,
         });
 
-        let filteredPlayers = results.data
-            .filter((row: PlayerRow) => {
-                if (!row.player_name || !row.position) return false;
+        let players: any[] = results.data;
 
-                // Priority 1: Filter by club if specified (e.g., for default Fenerbahçe load)
-                if (club && club.trim() !== '') {
-                    return row.current_club_name?.toLowerCase() === club.toLowerCase();
-                }
+        if (club) {
+            players = players.filter(p =>
+                p.current_club_name && p.current_club_name.toLowerCase().includes(club)
+            );
+        }
 
-                // Priority 2: Filter by search query if provided
-                if (query && query.trim() !== '') {
-                    const lowerQuery = query.toLowerCase();
-                    return row.player_name.toLowerCase().includes(lowerQuery) ||
-                        row.current_club_name?.toLowerCase().includes(lowerQuery);
-                }
+        if (query) {
+            players = players.filter(p =>
+                (p.player_name && p.player_name.toLowerCase().includes(query)) ||
+                (p.current_club_name && p.current_club_name.toLowerCase().includes(query))
+            );
+        }
 
-                // Default: return all players (for initial generic load)
-                return true;
-            })
-            .slice(0, limit) // Limit results
-            .map((row: PlayerRow): Player => ({
-                id: `csv-${row.player_id}`,
-                name: row.player_name.replace(/\s*\(\d+\)$/, ''), // Clean name
-                position: mapPosition(row.position),
-                rating: getRating(row.player_id),
-                value: getValue(row.player_id),
-                image: row.player_image_url,
-                club: row.current_club_name || 'Unknown'
-            }));
+        // Map to our Player type
+        const mappedPlayers: Player[] = players.slice(0, limit).map((p: any) => {
+            // Clean name: "Name (ID)" -> "Name"
+            let name = p.player_name;
+            if (name && name.includes("(") && name.includes(")")) {
+                name = name.replace(/\s*\(\d+\)$/, "").trim();
+            }
 
-        return NextResponse.json({ players: filteredPlayers });
+            return {
+                id: p.player_id || Math.random().toString(36).substr(2, 9),
+                name: name,
+                position: mapPosition(p.position) as any,
+                rating: 75,
+                value: parseCurrency(p.market_value_in_eur),
+                image: p.player_image_url || "https://via.placeholder.com/150",
+                club: p.current_club_name
+            };
+        });
+
+        return NextResponse.json({ players: mappedPlayers });
+
     } catch (error) {
-        console.error('Error processing players:', error);
-        return NextResponse.json({ error: 'Failed to fetch players', players: [] }, { status: 500 });
+        console.error("Error searching players:", error);
+        return NextResponse.json({ error: "Failed to search players" }, { status: 500 });
     }
 }

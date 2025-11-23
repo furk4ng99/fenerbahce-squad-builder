@@ -7,6 +7,8 @@ interface SquadState {
     squad: Record<string, Player | null>; // slotId -> Player
     customPositions: Record<string, { x: number; y: number; label?: string }>; // slotId -> {x, y, label}
     squadName: string;
+    budget: number;
+    ownedPlayers: Player[];
 
     setFormation: (formation: Formation) => void;
     setSquadName: (name: string) => void;
@@ -17,6 +19,7 @@ interface SquadState {
     resetSquad: () => void;
     calculateTotalCost: () => string;
     calculateAverageRating: () => string;
+    buyPlayer: (player: Player) => void;
 }
 
 export const useSquadStore = create<SquadState>()(
@@ -26,9 +29,21 @@ export const useSquadStore = create<SquadState>()(
             squad: {},
             customPositions: {},
             squadName: "",
+            budget: 100000000, // 100M initial budget
+            ownedPlayers: [],
 
             setFormation: (formation) => set({ formation, customPositions: {} }),
             setSquadName: (name) => set({ squadName: name }),
+
+            buyPlayer: (player) => set((state) => {
+                if (state.budget >= player.value) {
+                    return {
+                        budget: state.budget - player.value,
+                        ownedPlayers: [...state.ownedPlayers, player]
+                    };
+                }
+                return state;
+            }),
 
             addPlayerToSlot: (player, slotId) => set((state) => ({
                 squad: { ...state.squad, [slotId]: player }
@@ -54,7 +69,7 @@ export const useSquadStore = create<SquadState>()(
                 }
             })),
 
-            resetSquad: () => set({ squad: {}, customPositions: {}, squadName: "" }),
+            resetSquad: () => set({ squad: {}, customPositions: {}, squadName: "", budget: 100000000, ownedPlayers: [] }),
 
             calculateTotalCost: () => {
                 const state = get();

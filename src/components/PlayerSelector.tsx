@@ -56,7 +56,7 @@ export default function PlayerSelector({
     const [activeTab, setActiveTab] = useState<Tab>("ALL");
     const [apiPlayers, setApiPlayers] = useState<Player[]>([]);
     const [isSearchingAPI, setIsSearchingAPI] = useState(false);
-    const squadPlayers = useSquadStore((state) => state.players); // Use local players from store if needed, but we import 'players' from data/players too. 
+
     // Actually, the original code used 'players' from data/players and fetched API players.
     // Let's stick to that logic but ensure it works.
 

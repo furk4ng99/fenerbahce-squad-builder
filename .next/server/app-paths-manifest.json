@@ -1,0 +1,5 @@
+{
+  "/api/players/search/route": "app/api/players/search/route.js",
+  "/page": "app/page.js",
+  "/kadro-olusturucu/page": "app/kadro-olusturucu/page.js"
+}

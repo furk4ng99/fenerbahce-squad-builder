@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import playersData from "@/data/players.json";
+import { players } from "@/data/players";
 import PlayerCard from "@/components/PlayerCard";
 import { useSquadStore } from "@/store/useSquadStore";
 import { Search, ShoppingCart } from "lucide-react";
@@ -11,7 +11,7 @@ export default function MarketPage() {
     const [search, setSearch] = useState("");
     const { budget, buyPlayer } = useSquadStore();
 
-    const filteredPlayers = playersData.players.filter(p =>
+    const filteredPlayers = players.filter(p =>
         p.name.toLowerCase().includes(search.toLowerCase())
     );
 
