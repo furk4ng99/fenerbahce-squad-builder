@@ -154,7 +154,7 @@ export default function PlayerSelector({
         const transferLazimPlayer: Player = {
             id: "transfer-lazim",
             name: "Transfer Lazım",
-            position: position || "ST", // Adapt to current position
+            position: (position as Position) || "ST", // Adapt to current position
             rating: 0,
             value: 0,
             image: "/transfer-lazim.png",
