@@ -1,9 +1,4 @@
 {
-  "/_not-found": "app/_not-found.js",
-  "/api/players/search/route": "app/api/players/search/route.js",
-  "/analysis/page": "app/analysis/page.js",
   "/kadro-olusturucu/page": "app/kadro-olusturucu/page.js",
-  "/market/page": "app/market/page.js",
-  "/api/image-proxy/route": "app/api/image-proxy/route.js",
-  "/page": "app/page.js"
+  "/api/players/search/route": "app/api/players/search/route.js"
 }

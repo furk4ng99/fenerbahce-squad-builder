@@ -150,6 +150,26 @@ export default function PlayerSelector({
         const primary: Player[] = [];
         const others: Player[] = [];
 
+        // Add "Transfer Lazım" option if not searching or if it matches search
+        const transferLazimPlayer: Player = {
+            id: "transfer-lazim",
+            name: "Transfer Lazım",
+            position: position || "ST", // Adapt to current position
+            rating: 0,
+            value: 0,
+            image: "/transfer-lazim.png",
+            club: "Fenerbahçe"
+        };
+
+        const showTransferLazim = !isSearching ||
+            "transfer lazım".includes(searchTerm.toLowerCase()) ||
+            "transfer lazim".includes(searchTerm.toLowerCase());
+
+        if (showTransferLazim) {
+            // Always add to primary if it's shown
+            primary.push(transferLazimPlayer);
+        }
+
         source.forEach((p) => {
             if (position && p.position === position) {
                 primary.push(p);

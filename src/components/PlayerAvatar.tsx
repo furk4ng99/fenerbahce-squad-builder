@@ -69,7 +69,7 @@ export function PlayerAvatar({
                     "text-xs font-bold text-center leading-tight px-1 z-10",
                     variant === "default"
                         ? "text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)] whitespace-nowrap"
-                        : "text-fb-navy line-clamp-2"
+                        : "text-gray-900"
                 )}>
                     {name}
                 </div>

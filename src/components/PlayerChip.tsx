@@ -18,8 +18,10 @@ export default function PlayerChip({
 }: PlayerChipProps) {
     const [imageError, setImageError] = useState(false);
 
-    // Extract surname for display
-    const displayName = player.name.split(' ').pop() || player.name;
+    // Extract surname for display, but show full name for "Transfer Lazim"
+    const displayName = player.id === 'transfer-lazim'
+        ? player.name
+        : (player.name.split(' ').pop() || player.name);
 
     return (
         <div
@@ -36,13 +38,23 @@ export default function PlayerChip({
         >
             {/* Player Avatar & Name */}
             <div className="relative z-10 transition-transform group-hover:scale-105">
-                <PlayerAvatar
-                    imageUrl={player.image}
-                    name={player.name}
-                    size="md"
-                    variant="default"
-                    showName={false}
-                />
+                {player.id === 'transfer-lazim' ? (
+                    <div className="w-16 h-16 md:w-20 md:h-20 flex items-center justify-center">
+                        <img
+                            src={player.image}
+                            alt={player.name}
+                            className="w-full h-full object-contain drop-shadow-md"
+                        />
+                    </div>
+                ) : (
+                    <PlayerAvatar
+                        imageUrl={player.image}
+                        name={player.name}
+                        size="md"
+                        variant="default"
+                        showName={false}
+                    />
+                )}
             </div>
 
             {/* Player Name (Below Avatar) */}
