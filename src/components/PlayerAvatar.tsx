@@ -55,7 +55,7 @@ export function PlayerAvatar({
                         src={currentSrc}
                         alt={name}
                         className="w-full h-full object-cover"
-                        crossOrigin="anonymous"
+                        crossOrigin={currentSrc?.startsWith('/') ? undefined : "anonymous"}
                         onError={() => setImageError(true)}
                     />
                 ) : (
