@@ -1,5 +1,4 @@
 {
-  "/not-found": "app/not-found.js",
   "/page": "app/page.js",
   "/kadro-olusturucu/page": "app/kadro-olusturucu/page.js",
   "/api/players/search/route": "app/api/players/search/route.js"

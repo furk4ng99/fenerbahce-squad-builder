@@ -136,7 +136,8 @@ export default function PlayerSelector({
         if (isSearching) {
             const lowerSearch = searchTerm.toLowerCase();
             source = source.filter((p) =>
-                p.name.toLowerCase().includes(lowerSearch)
+                p.name.toLowerCase().includes(lowerSearch) ||
+                (p.club && p.club.toLowerCase().includes(lowerSearch))
             );
         }
 

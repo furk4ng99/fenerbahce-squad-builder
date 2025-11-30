@@ -58,6 +58,13 @@ export async function GET(request: NextRequest) {
             );
         }
 
+        // Sort by market value (descending)
+        players.sort((a, b) => {
+            const valA = parseCurrency(a.market_value_in_eur);
+            const valB = parseCurrency(b.market_value_in_eur);
+            return valB - valA;
+        });
+
         // Map to our Player type
         const mappedPlayers: Player[] = players.slice(0, limit).map((p: any) => {
             // Clean name: "Name (ID)" -> "Name"
