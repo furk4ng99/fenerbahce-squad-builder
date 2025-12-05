@@ -1,5 +1,5 @@
 {
-  "/page": "app/page.js",
-  "/kadro-olusturucu/page": "app/kadro-olusturucu/page.js",
-  "/api/players/search/route": "app/api/players/search/route.js"
+  "/duel/page": "app/duel/page.js",
+  "/tournament/page": "app/tournament/page.js",
+  "/page": "app/page.js"
 }

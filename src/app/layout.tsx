@@ -59,6 +59,8 @@ export default function RootLayout({
 
                 <nav className="hidden md:flex space-x-6 items-center">
                   <Link href="/kadro-olusturucu" className="hover:text-fb-yellow transition-colors font-bold tracking-wide">KADRO OLUŞTUR</Link>
+                  <Link href="/duel" className="hover:text-fb-yellow transition-colors font-bold tracking-wide">DÜELLO ARENASI</Link>
+                  <Link href="/tournament" className="hover:text-fb-yellow transition-colors font-bold tracking-wide">TURNUVA</Link>
                 </nav>
               </div>
             </header>
