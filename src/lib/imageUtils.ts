@@ -13,8 +13,9 @@ export async function fetchSafeImage(url: string): Promise<string> {
         // or a simple client-side fetch. 
         // Ideally, we should use the /api/image-proxy we saw earlier if it exists.
 
-        const proxyUrl = `/api/image-proxy?url=${encodeURIComponent(url)}`;
-        const response = await fetch(proxyUrl);
+        // In static export mode, we cannot use the API proxy.
+        // We attempt a direct fetch. If CORS blocks it, we catch the error below and return the original URL.
+        const response = await fetch(url, { mode: 'cors' });
 
         if (!response.ok) throw new Error(`Failed to fetch image: ${response.statusText}`);
 

@@ -61,6 +61,7 @@ export default function PlayerSelector({
     // Let's stick to that logic but ensure it works.
 
     // Set initial tab based on the requested position
+    // Set initial tab based on the requested position
     useEffect(() => {
         if (isOpen && position) {
             setActiveTab(getTabForPosition(position));
@@ -68,58 +69,25 @@ export default function PlayerSelector({
             setActiveTab("ALL");
         }
         setSearchTerm("");
-
-        // Auto-load Fenerbahçe players when modal opens
-        if (isOpen) {
-            setIsSearchingAPI(true);
-            fetch(`/api/players/search?club=fenerbahce&limit=100`)
-                .then(res => res.json())
-                .then(data => {
-                    if (data.players) {
-                        setApiPlayers(data.players);
-                    }
-                })
-                .catch(error => console.error("Failed to fetch Fenerbahçe players:", error))
-                .finally(() => setIsSearchingAPI(false));
-        } else {
-            setApiPlayers([]);
-        }
     }, [isOpen, position]);
 
-    // Debounced API Search
+    // Load static player data on mount
     useEffect(() => {
-        const timer = setTimeout(async () => {
-            if (searchTerm.length >= 3) {
-                setIsSearchingAPI(true);
-                try {
-                    const response = await fetch(`/api/players/search?query=${encodeURIComponent(searchTerm)}`);
-                    const data = await response.json();
-                    if (data.players) {
-                        setApiPlayers(data.players);
-                    }
-                } catch (error) {
-                    console.error("Failed to fetch players:", error);
-                } finally {
-                    setIsSearchingAPI(false);
+        setIsSearchingAPI(true);
+        fetch('/data/fenerbahce-players.json')
+            .then(res => res.json())
+            .then(data => {
+                if (data.players) {
+                    setApiPlayers(data.players);
                 }
-            } else if (searchTerm.length === 0) {
-                // Reload Fenerbahçe players when search is cleared
-                setIsSearchingAPI(true);
-                try {
-                    const response = await fetch(`/api/players/search?club=fenerbahce&limit=100`);
-                    const data = await response.json();
-                    if (data.players) {
-                        setApiPlayers(data.players);
-                    }
-                } catch (error) {
-                    console.error("Failed to fetch players:", error);
-                } finally {
-                    setIsSearchingAPI(false);
-                }
-            }
-        }, 300);
+            })
+            .catch(error => console.error("Failed to fetch players:", error))
+            .finally(() => setIsSearchingAPI(false));
+    }, []);
 
-        return () => clearTimeout(timer);
+    // Filter players client-side when search changes
+    useEffect(() => {
+        // Client-side filtering is handled in useMemo
     }, [searchTerm]);
 
     const { primaryMatches, otherMatches, isSearching } = useMemo(() => {
