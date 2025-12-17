@@ -25,7 +25,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'alex-de-souza',
         name: 'Alex de Souza',
-        image: '/data/fenerbahce-oyuncular/Alex de Souza, Fenerbahce.jpeg',
+        image: '/data/fenerbahce-oyuncular/alex-de-souza-fenerbahce.jpeg',
         position: 'CAM',
         era: '2000s',
         ...generateStats(false),
@@ -43,7 +43,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'ridvan-dilmen',
         name: 'Rıdvan Dilmen',
-        image: '/data/fenerbahce-oyuncular/ridvan dilmen.jpeg',
+        image: '/data/fenerbahce-oyuncular/ridvan-dilmen.jpeg',
         position: 'AM',
         era: '1980s',
         ...generateStats(false),
@@ -52,7 +52,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'aykut-kocaman',
         name: 'Aykut Kocaman',
-        image: '/data/fenerbahce-oyuncular/Aykut Kocaman.jpeg',
+        image: '/data/fenerbahce-oyuncular/aykut-kocaman.jpeg',
         position: 'ST',
         era: '1990s',
         ...generateStats(true),
@@ -61,7 +61,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'oguz-cetin',
         name: 'Oğuz Çetin',
-        image: '/data/fenerbahce-oyuncular/oguz cetin.jpeg',
+        image: '/data/fenerbahce-oyuncular/oguz-cetin.jpeg',
         position: 'DM',
         era: '1990s',
         ...generateStats(false),
@@ -70,7 +70,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'emre-belozoglu',
         name: 'Emre Belözoğlu',
-        image: '/data/fenerbahce-oyuncular/emre belozoglu.jpeg',
+        image: '/data/fenerbahce-oyuncular/emre-belozoglu.jpeg',
         position: 'CM',
         era: '2000s',
         ...generateStats(false),
@@ -81,7 +81,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'pierre-van-hooijdonk',
         name: 'Pierre van Hooijdonk',
-        image: '/data/fenerbahce-oyuncular/Pierre van Hooijdonk.jpeg',
+        image: '/data/fenerbahce-oyuncular/pierre-van-hooijdonk.jpeg',
         position: 'ST',
         era: '2000s',
         ...generateStats(true),
@@ -90,7 +90,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'elvir-bolic',
         name: 'Elvir Bolić',
-        image: '/data/fenerbahce-oyuncular/Elvir Boliç.jpeg',
+        image: '/data/fenerbahce-oyuncular/elvir-bolic.jpeg',
         position: 'ST',
         era: '1990s',
         ...generateStats(true),
@@ -99,7 +99,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'robin-van-persie',
         name: 'Robin van Persie',
-        image: '/data/fenerbahce-oyuncular/Robin van Persie - Fenerbahçe SK.jpeg',
+        image: '/data/fenerbahce-oyuncular/robin-van-persie-fenerbahce-sk.jpeg',
         position: 'ST',
         era: '2010s',
         ...generateStats(true),
@@ -108,7 +108,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'moussa-sow',
         name: 'Moussa Sow',
-        image: '/data/fenerbahce-oyuncular/Moussa Sow.jpeg',
+        image: '/data/fenerbahce-oyuncular/moussa-sow.jpeg',
         position: 'ST',
         era: '2010s',
         ...generateStats(true),
@@ -126,7 +126,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'dzeko',
         name: 'Edin Džeko',
-        image: '/data/fenerbahce-oyuncular/Dzeko¹⁹⁰⁷.jpeg',
+        image: '/data/fenerbahce-oyuncular/dzeko.jpeg',
         position: 'ST',
         era: '2020s',
         ...generateStats(true),
@@ -135,7 +135,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'tuncay-sanli',
         name: 'Tuncay Şanlı',
-        image: '/data/fenerbahce-oyuncular/tuncay sanli.jpeg',
+        image: '/data/fenerbahce-oyuncular/tuncay-sanli.jpeg',
         position: 'ST',
         era: '2000s',
         ...generateStats(true),
@@ -146,7 +146,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'jay-jay-okocha',
         name: 'Jay-Jay Okocha',
-        image: '/data/fenerbahce-oyuncular/Jay-Jay Okocha.jpeg',
+        image: '/data/fenerbahce-oyuncular/jay-jay-okocha.jpeg',
         position: 'AM',
         era: '1990s',
         ...generateStats(false),
@@ -155,7 +155,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'stephen-appiah',
         name: 'Stephen Appiah',
-        image: '/data/fenerbahce-oyuncular/Stephen Appiah.jpeg',
+        image: '/data/fenerbahce-oyuncular/stephen-appiah.jpeg',
         position: 'CM',
         era: '2000s',
         ...generateStats(false),
@@ -164,7 +164,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'dirk-kuyt',
         name: 'Dirk Kuyt',
-        image: '/data/fenerbahce-oyuncular/Dirk Kuyt.jpeg',
+        image: '/data/fenerbahce-oyuncular/dirk-kuyt.jpeg',
         position: 'RW',
         era: '2010s',
         ...generateStats(false),
@@ -173,7 +173,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'nani',
         name: 'Nani',
-        image: '/data/fenerbahce-oyuncular/Nani.jpeg',
+        image: '/data/fenerbahce-oyuncular/nani.jpeg',
         position: 'LW',
         era: '2010s',
         ...generateStats(false),
@@ -182,7 +182,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'mehmet-topal',
         name: 'Mehmet Topal',
-        image: '/data/fenerbahce-oyuncular/Mehmet Topal.jpeg',
+        image: '/data/fenerbahce-oyuncular/mehmet-topal.jpeg',
         position: 'DM',
         era: '2010s',
         ...generateStats(false),
@@ -209,7 +209,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'ismail-yuksek',
         name: 'İsmail Yüksek',
-        image: '/data/fenerbahce-oyuncular/ismail yuksek.jpeg',
+        image: '/data/fenerbahce-oyuncular/ismail-yuksek.jpeg',
         position: 'CM',
         era: '2020s',
         ...generateStats(false),
@@ -218,7 +218,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'arda-guler',
         name: 'Arda Güler',
-        image: '/data/fenerbahce-oyuncular/arda guler.jpeg',
+        image: '/data/fenerbahce-oyuncular/arda-guler.jpeg',
         position: 'AM',
         era: '2020s',
         ...generateStats(false),
@@ -247,7 +247,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'roberto-carlos',
         name: 'Roberto Carlos',
-        image: '/data/fenerbahce-oyuncular/Roberto Carlos.jpeg',
+        image: '/data/fenerbahce-oyuncular/roberto-carlos.jpeg',
         position: 'LB',
         era: '2000s',
         ...generateStats(false),
@@ -256,7 +256,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'diego-lugano',
         name: 'Diego Lugano',
-        image: '/data/fenerbahce-oyuncular/Diego Lugano.jpeg',
+        image: '/data/fenerbahce-oyuncular/diego-lugano.jpeg',
         position: 'CB',
         era: '2000s',
         ...generateStats(false),
@@ -265,7 +265,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'joseph-yobo',
         name: 'Joseph Yobo',
-        image: '/data/fenerbahce-oyuncular/Joseph Yobo.jpeg',
+        image: '/data/fenerbahce-oyuncular/joseph-yobo.jpeg',
         position: 'CB',
         era: '2000s',
         ...generateStats(false),
@@ -274,7 +274,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'uche-okechukwu',
         name: 'Uche Okechukwu',
-        image: '/data/fenerbahce-oyuncular/Uche Okechukwu.jpeg',
+        image: '/data/fenerbahce-oyuncular/uche-okechukwu.jpeg',
         position: 'CB',
         era: '1990s',
         ...generateStats(false),
@@ -283,7 +283,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'gokhan-gonul',
         name: 'Gökhan Gönül',
-        image: '/data/fenerbahce-oyuncular/Gökhan Gönül Fenerbahçe.jpeg',
+        image: '/data/fenerbahce-oyuncular/gokhan-gonul-fenerbahce.jpeg',
         position: 'RB',
         era: '2010s',
         ...generateStats(false),
@@ -292,7 +292,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'caner-erkin',
         name: 'Caner Erkin',
-        image: '/data/fenerbahce-oyuncular/Caner Erkin.jpeg',
+        image: '/data/fenerbahce-oyuncular/caner-erkin.jpeg',
         position: 'LB',
         era: '2010s',
         ...generateStats(false),
@@ -301,7 +301,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'kim-min-jae',
         name: 'Kim Min-Jae',
-        image: '/data/fenerbahce-oyuncular/Fenerbahçe-Kim-Min-Jae.jpeg',
+        image: '/data/fenerbahce-oyuncular/fenerbahce-kim-min-jae.jpeg',
         position: 'CB',
         era: '2020s',
         ...generateStats(false),
@@ -310,7 +310,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'ferdi-kadioglu',
         name: 'Ferdi Kadıoğlu',
-        image: '/data/fenerbahce-oyuncular/Ferdi Kadıoğlu Wallpaper.jpeg',
+        image: '/data/fenerbahce-oyuncular/ferdi-kadioglu-wallpaper.jpeg',
         position: 'LB',
         era: '2020s',
         ...generateStats(false),
@@ -319,7 +319,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'jayden-oosterwolde',
         name: 'Jayden Oosterwolde',
-        image: '/data/fenerbahce-oyuncular/Jayden Oosterwolde 💪🏻.jpeg',
+        image: '/data/fenerbahce-oyuncular/jayden-oosterwolde.jpeg',
         position: 'LB',
         era: '2020s',
         ...generateStats(false),
@@ -339,7 +339,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'volkan-demirel',
         name: 'Volkan Demirel',
-        image: '/data/fenerbahce-oyuncular/Volkan Demirel 💪🏻.jpeg',
+        image: '/data/fenerbahce-oyuncular/volkan-demirel.jpeg',
         position: 'GK',
         era: '2000s',
         ...generateStats(false),
@@ -348,7 +348,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'toni-schumacher',
         name: 'Toni Schumacher',
-        image: '/data/fenerbahce-oyuncular/Toni Schumacher.jpeg',
+        image: '/data/fenerbahce-oyuncular/toni-schumacher.jpeg',
         position: 'GK',
         era: '1980s',
         ...generateStats(false),
@@ -359,7 +359,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'cristian-baroni',
         name: 'Cristian Baroni',
-        image: '/data/fenerbahce-oyuncular/Cristian Baroni Fenerbahçe.jpeg',
+        image: '/data/fenerbahce-oyuncular/cristian-baroni-fenerbahce.jpeg',
         position: 'LB',
         era: '2000s',
         ...generateStats(false),
@@ -368,7 +368,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'andre-santos',
         name: 'André Santos',
-        image: '/data/fenerbahce-oyuncular/Andre do Santos _ Brezilya (2009-2011).jpeg',
+        image: '/data/fenerbahce-oyuncular/andre-do-santos-brezilya-2009-2011.jpeg',
         position: 'LB',
         era: '2000s',
         ...generateStats(false),
@@ -377,7 +377,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'david-de-souza',
         name: 'David de Souza',
-        image: '/data/fenerbahce-oyuncular/David De Souza.jpeg',
+        image: '/data/fenerbahce-oyuncular/david-de-souza.jpeg',
         position: 'CM',
         era: '2000s',
         ...generateStats(false),
@@ -386,7 +386,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'ismail-kartal',
         name: 'İsmail Kartal',
-        image: '/data/fenerbahce-oyuncular/Ismail Kartal.jpeg',
+        image: '/data/fenerbahce-oyuncular/ismail-kartal.jpeg',
         position: 'DM',
         era: '1990s',
         ...generateStats(false),
@@ -395,7 +395,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'cristian',
         name: 'Cristian Oliveira',
-        image: '/data/fenerbahce-oyuncular/Cristian Baroni Fenerbahçe.jpeg',
+        image: '/data/fenerbahce-oyuncular/cristian-baroni-fenerbahce.jpeg',
         position: 'AM',
         era: '2010s',
         ...generateStats(false),
