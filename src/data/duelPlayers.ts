@@ -173,7 +173,7 @@ export const duelPlayers: DuelPlayer[] = [
     {
         id: 'nani',
         name: 'Nani',
-        image: '/data/fenerbahce-oyuncular/nani.jpeg',
+        image: '/data/fenerbahce-oyuncular/Nani.jpeg',
         position: 'LW',
         era: '2010s',
         ...generateStats(false),
