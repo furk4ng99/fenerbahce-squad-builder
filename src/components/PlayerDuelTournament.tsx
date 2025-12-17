@@ -116,11 +116,22 @@ export default function PlayerDuelTournament() {
             // Check for champion - the WINNER of this duel is the champion
             if (remaining.length === 1) {
                 setChampion(winner);
+                setIsTransitioning(false);
                 return;
             }
 
-            // Get next pair
-            const nextPair = getNextPair(remaining, [winner.id]);
+            // Get next pair - if only 2 players remain, pair them directly (final)
+            let nextPair: [DuelPlayer, DuelPlayer] | null;
+            if (remaining.length === 2) {
+                nextPair = [remaining[0], remaining[1]];
+            } else {
+                nextPair = getNextPair(remaining, [winner.id]);
+                // Fallback: if exclusion results in null, try without exclusion
+                if (!nextPair && remaining.length >= 2) {
+                    nextPair = getNextPair(remaining, []);
+                }
+            }
+
             if (nextPair) {
                 setCurrentPair(nextPair);
             }
