@@ -8,6 +8,27 @@ import { Search, X, Trash2 } from "lucide-react";
 import { useSquadStore } from "@/store/useSquadStore";
 import { cn } from "@/lib/utils";
 
+// Normalize Turkish characters to their ASCII equivalents for search
+function normalizeTurkish(str: string): string {
+    const turkishMap: Record<string, string> = {
+        'ç': 'c', 'Ç': 'C',
+        'ğ': 'g', 'Ğ': 'G',
+        'ı': 'i', 'I': 'I',
+        'İ': 'I', 'i': 'i',
+        'ö': 'o', 'Ö': 'O',
+        'ş': 's', 'Ş': 'S',
+        'ü': 'u', 'Ü': 'U',
+        'á': 'a', 'à': 'a', 'â': 'a', 'ã': 'a', 'ä': 'a',
+        'é': 'e', 'è': 'e', 'ê': 'e', 'ë': 'e',
+        'í': 'i', 'ì': 'i', 'î': 'i', 'ï': 'i',
+        'ó': 'o', 'ò': 'o', 'ô': 'o', 'õ': 'o',
+        'ú': 'u', 'ù': 'u', 'û': 'u',
+        'ñ': 'n', 'Ñ': 'N',
+        'ý': 'y', 'ÿ': 'y',
+    };
+    return str.split('').map(char => turkishMap[char] || char).join('');
+}
+
 interface PlayerSelectorProps {
     isOpen: boolean;
     onClose: () => void;
@@ -55,12 +76,10 @@ export default function PlayerSelector({
     const [searchTerm, setSearchTerm] = useState("");
     const [activeTab, setActiveTab] = useState<Tab>("ALL");
     const [apiPlayers, setApiPlayers] = useState<Player[]>([]);
+    const [globalPlayers, setGlobalPlayers] = useState<Player[]>([]);
     const [isSearchingAPI, setIsSearchingAPI] = useState(false);
+    const [globalPlayersLoaded, setGlobalPlayersLoaded] = useState(false);
 
-    // Actually, the original code used 'players' from data/players and fetched API players.
-    // Let's stick to that logic but ensure it works.
-
-    // Set initial tab based on the requested position
     // Set initial tab based on the requested position
     useEffect(() => {
         if (isOpen && position) {
@@ -71,7 +90,7 @@ export default function PlayerSelector({
         setSearchTerm("");
     }, [isOpen, position]);
 
-    // Load static player data on mount
+    // Load Fenerbahce squad on mount
     useEffect(() => {
         setIsSearchingAPI(true);
         fetch('/data/fenerbahce-players.json')
@@ -85,15 +104,38 @@ export default function PlayerSelector({
             .finally(() => setIsSearchingAPI(false));
     }, []);
 
-    // Filter players client-side when search changes
+    // Load global players when user searches (3+ characters)
     useEffect(() => {
-        // Client-side filtering is handled in useMemo
-    }, [searchTerm]);
+        if (searchTerm.length >= 3 && !globalPlayersLoaded) {
+            setIsSearchingAPI(true);
+            fetch('/data/global-players.json')
+                .then(res => res.json())
+                .then(data => {
+                    if (data.players) {
+                        setGlobalPlayers(data.players);
+                        setGlobalPlayersLoaded(true);
+                    }
+                })
+                .catch(error => console.error("Failed to fetch global players:", error))
+                .finally(() => setIsSearchingAPI(false));
+        }
+    }, [searchTerm, globalPlayersLoaded]);
+
 
     const { primaryMatches, otherMatches, isSearching } = useMemo(() => {
-        // Combine local players (legends) and API players
+        // Combine players based on search mode
         const hasSearchTerm = searchTerm.length > 0;
-        let source = hasSearchTerm ? [...players, ...apiPlayers] : [...apiPlayers];
+        const isGlobalSearch = searchTerm.length >= 3;
+
+        // When searching globally (3+ chars), include global players
+        let source: Player[];
+        if (isGlobalSearch) {
+            source = [...players, ...apiPlayers, ...globalPlayers];
+        } else if (hasSearchTerm) {
+            source = [...players, ...apiPlayers];
+        } else {
+            source = [...apiPlayers];
+        }
 
         // Remove duplicates
         source = Array.from(new Map(source.map(p => [p.id, p])).values());
@@ -102,11 +144,13 @@ export default function PlayerSelector({
 
         // 1. Filter by Search Term
         if (isSearching) {
-            const lowerSearch = searchTerm.toLowerCase();
-            source = source.filter((p) =>
-                p.name.toLowerCase().includes(lowerSearch) ||
-                (p.club && p.club.toLowerCase().includes(lowerSearch))
-            );
+            const normalizedSearch = normalizeTurkish(searchTerm.toLowerCase());
+            source = source.filter((p) => {
+                const normalizedName = normalizeTurkish(p.name.toLowerCase());
+                const normalizedClub = p.club ? normalizeTurkish(p.club.toLowerCase()) : '';
+                return normalizedName.includes(normalizedSearch) ||
+                    normalizedClub.includes(normalizedSearch);
+            });
         }
 
         // 2. Filter by Tab
@@ -148,7 +192,7 @@ export default function PlayerSelector({
         });
 
         return { primaryMatches: primary, otherMatches: others, isSearching };
-    }, [searchTerm, activeTab, position, apiPlayers]);
+    }, [searchTerm, activeTab, position, apiPlayers, globalPlayers]);
 
     // Lock body scroll when modal is open
     useEffect(() => {
