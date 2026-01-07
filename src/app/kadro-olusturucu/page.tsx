@@ -42,9 +42,9 @@ export default function BuilderPage() {
             <ParticleBackground />
 
             <div className="relative z-10 container mx-auto px-4 py-4 md:py-8">
-                <div className="flex flex-col xl:flex-row gap-6 xl:gap-8 items-start justify-center">
+                <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-start justify-center">
                     {/* Controls Panel (Top on Mobile, Left on Desktop) */}
-                    <div className="w-full xl:w-72 space-y-4 shrink-0 order-1 xl:order-1">
+                    <div className="w-full lg:w-80 space-y-4 shrink-0 order-1 lg:order-1">
                         {/* Squad Name Input */}
                         <div className="bg-fb-navy/90 backdrop-blur-md rounded-xl p-4 md:p-6 border border-white/20 shadow-xl">
                             <label className="block text-xs font-bold text-white/80 uppercase tracking-wider mb-2">
@@ -108,22 +108,16 @@ export default function BuilderPage() {
                         </div>
                     </div>
 
-                    {/* Main Content: Pitch + Bench Side by Side on Desktop */}
-                    <div className="flex-1 order-2 xl:order-2">
-                        {/* Export Container - includes both Pitch and Bench */}
-                        <div id="squad-export-area" ref={exportRef} className="flex flex-col lg:flex-row gap-4 lg:gap-6 items-start justify-center">
-                            {/* Pitch */}
-                            <div className="w-full max-w-[420px] lg:max-w-[450px]" ref={pitchRef}>
+                    {/* Pitch Area + Bench (Bottom on Mobile, Right on Desktop) */}
+                    <div className="flex-1 w-full max-w-[420px] lg:max-w-[500px] mx-auto order-2 lg:order-2" ref={pitchRef}>
+                        {/* Export Container - includes both Pitch and Bench for screenshot */}
+                        <div id="squad-export-area" ref={exportRef} className="space-y-4">
+                            <div className="relative">
                                 <Pitch />
                             </div>
-
-                            {/* Bench - Right side on desktop, below on mobile */}
-                            <div className="w-full lg:w-auto lg:min-w-[180px] lg:max-w-[200px]">
-                                <SubstituteBench layout="vertical" />
-                            </div>
+                            <SubstituteBench />
                         </div>
-
-                        <div className="text-center mt-4 hidden xl:block">
+                        <div className="text-center mt-4 hidden lg:block">
                             <p className="text-xs text-gray-400">
                                 * Oyuncuları sürükleyip bırakarak yerlerini değiştirebilirsiniz.
                             </p>

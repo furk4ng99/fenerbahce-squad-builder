@@ -9,7 +9,7 @@ import PlayerSelector from "./PlayerSelector";
 import { Plus, X, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const BENCH_SIZE = 7;
+const BENCH_SIZE = 10;
 
 interface BenchSlotProps {
     player: Player | null;
@@ -55,10 +55,9 @@ function BenchSlot({ player, index, onClick, onRemove }: BenchSlotProps) {
 
 interface SubstituteBenchProps {
     isExport?: boolean;
-    layout?: "horizontal" | "vertical";
 }
 
-export function SubstituteBench({ isExport, layout = "horizontal" }: SubstituteBenchProps) {
+export function SubstituteBench({ isExport }: SubstituteBenchProps) {
     const { bench, addPlayerToBench, removePlayerFromBench } = useSquadStore();
     const [selectedSlotIndex, setSelectedSlotIndex] = useState<number | null>(null);
     const [mounted, setMounted] = useState(false);
@@ -98,19 +97,11 @@ export function SubstituteBench({ isExport, layout = "horizontal" }: SubstituteB
         );
     };
 
-    const isVertical = layout === "vertical";
-
     return (
         <>
-            <div className={cn(
-                "bg-fb-navy/80 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-xl",
-                isVertical ? "w-full" : "w-full"
-            )}>
+            <div className="w-full bg-fb-navy/80 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-xl">
                 {/* Header */}
-                <div className={cn(
-                    "flex items-center justify-between mb-4",
-                    isVertical && "flex-col gap-2"
-                )}>
+                <div className="flex items-center justify-between mb-4">
                     <div className="flex items-center gap-2">
                         <Users className="w-5 h-5 text-fb-yellow" />
                         <h3 className="text-white font-bold text-sm uppercase tracking-wide">
@@ -123,12 +114,7 @@ export function SubstituteBench({ isExport, layout = "horizontal" }: SubstituteB
                 </div>
 
                 {/* Bench Slots */}
-                <div className={cn(
-                    "flex gap-3",
-                    isVertical
-                        ? "flex-col items-center"
-                        : "flex-wrap justify-center md:gap-4"
-                )}>
+                <div className="flex flex-wrap justify-center gap-3 md:gap-4">
                     {bench.map((player, index) => (
                         <BenchSlot
                             key={`bench-${index}`}

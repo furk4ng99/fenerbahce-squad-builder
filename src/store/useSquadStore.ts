@@ -2,12 +2,12 @@ import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { Player, Formation } from '@/types';
 
-const BENCH_SIZE = 7;
+const BENCH_SIZE = 10;
 
 interface SquadState {
     formation: Formation;
     squad: Record<string, Player | null>; // slotId -> Player
-    bench: (Player | null)[]; // 7 slots for substitutes
+    bench: (Player | null)[]; // 10 slots for substitutes
     customPositions: Record<string, { x: number; y: number; label?: string }>; // slotId -> {x, y, label}
     squadName: string;
     budget: number;
