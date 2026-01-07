@@ -182,6 +182,21 @@ export const useSquadStore = create<SquadState>()(
         }),
         {
             name: 'fenerbahce-squad-storage',
+            // Migration: ensure bench has correct size
+            merge: (persistedState: any, currentState: SquadState) => {
+                const merged = { ...currentState, ...persistedState };
+                // Ensure bench array has BENCH_SIZE slots
+                if (merged.bench && merged.bench.length < BENCH_SIZE) {
+                    // Pad with nulls to reach BENCH_SIZE
+                    merged.bench = [
+                        ...merged.bench,
+                        ...Array(BENCH_SIZE - merged.bench.length).fill(null)
+                    ];
+                } else if (!merged.bench) {
+                    merged.bench = Array(BENCH_SIZE).fill(null);
+                }
+                return merged;
+            }
         }
     )
 );
