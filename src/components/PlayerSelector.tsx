@@ -36,6 +36,7 @@ interface PlayerSelectorProps {
     position?: string;
     currentPlayer?: Player | null;
     onRemove?: () => void;
+    isBenchMode?: boolean;
 }
 
 type Tab = "ALL" | "GK" | "DEF" | "MID" | "FWD";
@@ -72,6 +73,7 @@ export default function PlayerSelector({
     position,
     currentPlayer,
     onRemove,
+    isBenchMode = false,
 }: PlayerSelectorProps) {
     const [searchTerm, setSearchTerm] = useState("");
     const [activeTab, setActiveTab] = useState<Tab>("ALL");
@@ -215,7 +217,9 @@ export default function PlayerSelector({
                 <div className="bg-fb-navy p-4 flex justify-between items-center shrink-0">
                     <div>
                         <h3 className="text-xl font-bold text-white font-bebas tracking-wide flex items-center gap-2">
-                            OYUNCU SEÇ {position && <span className="text-fb-yellow">({position})</span>}
+                            {isBenchMode ? "YEDEK OYUNCU SEÇ" : (
+                                <>OYUNCU SEÇ {position && <span className="text-fb-yellow">({position})</span>}</>
+                            )}
                         </h3>
                         <p className="text-xs text-blue-200 mt-0.5">
                             {isSearching ? "Tüm veritabanında aranıyor" : "Fenerbahçe kadrosu görüntüleniyor"}
@@ -265,23 +269,25 @@ export default function PlayerSelector({
                         </div>
                     </div>
 
-                    {/* Tabs */}
-                    <div className="flex px-4 overflow-x-auto hide-scrollbar gap-2 pb-3">
-                        {TABS.map((tab) => (
-                            <button
-                                key={tab.id}
-                                onClick={() => setActiveTab(tab.id)}
-                                className={cn(
-                                    "px-4 py-2 rounded-lg text-sm font-bold whitespace-nowrap transition-all",
-                                    activeTab === tab.id
-                                        ? "bg-fb-navy text-white shadow-md"
-                                        : "bg-gray-100 text-gray-600 hover:bg-gray-200 border border-transparent"
-                                )}
-                            >
-                                {tab.label}
-                            </button>
-                        ))}
-                    </div>
+                    {/* Tabs - hide in bench mode */}
+                    {!isBenchMode && (
+                        <div className="flex px-4 overflow-x-auto hide-scrollbar gap-2 pb-3">
+                            {TABS.map((tab) => (
+                                <button
+                                    key={tab.id}
+                                    onClick={() => setActiveTab(tab.id)}
+                                    className={cn(
+                                        "px-4 py-2 rounded-lg text-sm font-bold whitespace-nowrap transition-all",
+                                        activeTab === tab.id
+                                            ? "bg-fb-navy text-white shadow-md"
+                                            : "bg-gray-100 text-gray-600 hover:bg-gray-200 border border-transparent"
+                                    )}
+                                >
+                                    {tab.label}
+                                </button>
+                            ))}
+                        </div>
+                    )}
                 </div>
 
                 {/* Player List */}
