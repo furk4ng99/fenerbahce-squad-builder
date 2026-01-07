@@ -1,6 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 import { useSquadStore } from "@/store/useSquadStore";
 import { Player, Position } from "@/types";
 import PlayerChip from "./PlayerChip";
@@ -59,6 +60,12 @@ interface SubstituteBenchProps {
 export function SubstituteBench({ isExport }: SubstituteBenchProps) {
     const { bench, addPlayerToBench, removePlayerFromBench } = useSquadStore();
     const [selectedSlotIndex, setSelectedSlotIndex] = useState<number | null>(null);
+    const [mounted, setMounted] = useState(false);
+
+    // Ensure we're on the client
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     const benchCount = bench.filter(p => p !== null).length;
 
@@ -69,48 +76,58 @@ export function SubstituteBench({ isExport }: SubstituteBenchProps) {
         setSelectedSlotIndex(null);
     };
 
+    // Player Selector Modal - render via portal to body to ensure fullscreen
+    const renderPlayerSelector = () => {
+        if (selectedSlotIndex === null || isExport || !mounted) return null;
+
+        return createPortal(
+            <PlayerSelector
+                isOpen={selectedSlotIndex !== null}
+                onClose={() => setSelectedSlotIndex(null)}
+                onSelect={handleSelectPlayer}
+                onRemove={() => {
+                    removePlayerFromBench(selectedSlotIndex);
+                    setSelectedSlotIndex(null);
+                }}
+                position={undefined}
+                currentPlayer={bench[selectedSlotIndex]}
+            />,
+            document.body
+        );
+    };
+
     return (
-        <div className="w-full bg-fb-navy/80 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-xl">
-            {/* Header */}
-            <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center gap-2">
-                    <Users className="w-5 h-5 text-fb-yellow" />
-                    <h3 className="text-white font-bold text-sm uppercase tracking-wide">
-                        Yedek Kulübesi
-                    </h3>
+        <>
+            <div className="w-full bg-fb-navy/80 backdrop-blur-md rounded-xl p-4 border border-white/20 shadow-xl">
+                {/* Header */}
+                <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center gap-2">
+                        <Users className="w-5 h-5 text-fb-yellow" />
+                        <h3 className="text-white font-bold text-sm uppercase tracking-wide">
+                            Yedek Kulübesi
+                        </h3>
+                    </div>
+                    <span className="text-fb-yellow font-bold text-sm">
+                        {benchCount} / {BENCH_SIZE}
+                    </span>
                 </div>
-                <span className="text-fb-yellow font-bold text-sm">
-                    {benchCount} / {BENCH_SIZE}
-                </span>
+
+                {/* Bench Slots */}
+                <div className="flex flex-wrap justify-center gap-3 md:gap-4">
+                    {bench.map((player, index) => (
+                        <BenchSlot
+                            key={`bench-${index}`}
+                            player={player}
+                            index={index}
+                            onClick={() => setSelectedSlotIndex(index)}
+                            onRemove={() => removePlayerFromBench(index)}
+                        />
+                    ))}
+                </div>
             </div>
 
-            {/* Bench Slots */}
-            <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-                {bench.map((player, index) => (
-                    <BenchSlot
-                        key={`bench-${index}`}
-                        player={player}
-                        index={index}
-                        onClick={() => setSelectedSlotIndex(index)}
-                        onRemove={() => removePlayerFromBench(index)}
-                    />
-                ))}
-            </div>
-
-            {/* Player Selector Modal */}
-            {selectedSlotIndex !== null && !isExport && (
-                <PlayerSelector
-                    isOpen={selectedSlotIndex !== null}
-                    onClose={() => setSelectedSlotIndex(null)}
-                    onSelect={handleSelectPlayer}
-                    onRemove={() => {
-                        removePlayerFromBench(selectedSlotIndex);
-                        setSelectedSlotIndex(null);
-                    }}
-                    position={undefined}
-                    currentPlayer={bench[selectedSlotIndex]}
-                />
-            )}
-        </div>
+            {/* Render modal via portal to ensure fullscreen */}
+            {renderPlayerSelector()}
+        </>
     );
 }
