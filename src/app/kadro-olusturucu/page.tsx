@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import { Pitch } from "@/components/Pitch";
+import { SubstituteBench } from "@/components/SubstituteBench";
 import { useSquadStore } from "@/store/useSquadStore";
 import { formations } from "@/data/formations";
 import { RotateCcw, Users } from "lucide-react";
@@ -15,6 +16,7 @@ export default function BuilderPage() {
         setFormation,
         resetSquad,
         squad,
+        bench,
         calculateTotalCost,
         calculateAverageRating,
     } = useSquadStore();
@@ -23,7 +25,8 @@ export default function BuilderPage() {
     const exportRef = useRef<HTMLDivElement>(null);
     const totalCost = calculateTotalCost();
     const avgRating = calculateAverageRating();
-    const playerCount = Object.keys(squad).length;
+    const playerCount = Object.values(squad).filter(p => p !== null).length;
+    const benchCount = bench.filter(p => p !== null).length;
 
     return (
         <div className="min-h-[calc(100vh-80px)] relative overflow-hidden bg-[#001d3d]">
@@ -78,20 +81,24 @@ export default function BuilderPage() {
 
                             <div className="flex justify-between items-center pt-2 border-t border-white/10">
                                 <span className="text-gray-300 text-sm">Oyuncular</span>
-                                <span className="text-lg font-bold text-white">{playerCount} / 11</span>
+                                <div className="flex items-center gap-2">
+                                    <span className="text-lg font-bold text-white">{playerCount}/11</span>
+                                    <span className="text-gray-400">|</span>
+                                    <span className="text-sm text-fb-yellow font-medium">{benchCount}/7</span>
+                                </div>
                             </div>
                         </div>
 
                         {/* Actions */}
-                        <div className="grid grid-cols-2 gap-3">
+                        <div className="grid grid-cols-1 gap-3">
+                            <ShareButton targetRef={exportRef} />
                             <button
                                 onClick={resetSquad}
-                                className="flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white py-3 px-4 rounded-lg font-bold transition-colors shadow-lg text-sm md:text-base"
+                                className="flex items-center justify-center gap-2 bg-red-600/80 hover:bg-red-700 text-white py-3 px-4 rounded-lg font-bold transition-colors shadow-lg text-sm md:text-base"
                             >
                                 <RotateCcw size={18} />
                                 Sıfırla
                             </button>
-                            <ShareButton targetRef={exportRef} />
                         </div>
 
                         <div className="text-center lg:hidden">
@@ -101,10 +108,14 @@ export default function BuilderPage() {
                         </div>
                     </div>
 
-                    {/* Pitch Area (Bottom on Mobile, Right on Desktop) */}
+                    {/* Pitch Area + Bench (Bottom on Mobile, Right on Desktop) */}
                     <div className="flex-1 w-full max-w-[420px] lg:max-w-[500px] mx-auto order-2 lg:order-2" ref={pitchRef}>
-                        <div className="relative">
-                            <Pitch />
+                        {/* Export Container - includes both Pitch and Bench for screenshot */}
+                        <div id="squad-export-area" ref={exportRef} className="space-y-4">
+                            <div className="relative">
+                                <Pitch />
+                            </div>
+                            <SubstituteBench />
                         </div>
                         <div className="text-center mt-4 hidden lg:block">
                             <p className="text-xs text-gray-400">
