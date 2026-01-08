@@ -108,11 +108,11 @@ export default function BuilderPage() {
                         </div>
                     </div>
 
-                    {/* Pitch Area + Bench (Bottom on Mobile, Right on Desktop) */}
+                    {/* Pitch Area + Bench */}
                     <div className="flex-1 w-full max-w-[420px] lg:max-w-[500px] mx-auto order-2 lg:order-2" ref={pitchRef}>
-                        {/* Export Container - includes both Pitch and Bench for screenshot */}
-                        <div id="squad-export-area" ref={exportRef} className="space-y-4">
-                            <div className="relative">
+                        <div className="space-y-4">
+                            {/* Export Container - only Pitch for screenshot */}
+                            <div id="squad-export-area" ref={exportRef} className="relative">
                                 <Pitch />
                             </div>
                             <SubstituteBench />
