@@ -23,10 +23,30 @@ const teko = Teko({
 });
 
 export const metadata: Metadata = {
-  title: "Fener Ajans",
-  description: "Hayalinizdeki Fenerbahçe kadrosunu oluşturun.",
+  metadataBase: new URL('https://fenerajans.com'),
+  title: "Fener Ajans - 2025 Süper Kupa Şampiyonu Fenerbahçe",
+  description: "Hayalinizdeki Fenerbahçe kadrosunu oluşturun. 2025 Turkcell Süper Kupa Şampiyonu!",
   icons: {
     icon: '/bull-icon.png',
+  },
+  openGraph: {
+    title: "Fener Ajans - 2025 Süper Kupa Şampiyonu",
+    description: "Fenerbahçe 2025 Turkcell Süper Kupa Şampiyonu! Galatasaray 0-2 Fenerbahçe",
+    images: [
+      {
+        url: '/assets/superkupa-2025-sampiyon.jpg',
+        width: 800,
+        height: 1000,
+        alt: 'Fenerbahçe 2025 Turkcell Süper Kupa Şampiyonu',
+      },
+    ],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Fener Ajans - 2025 Süper Kupa Şampiyonu",
+    description: "Fenerbahçe 2025 Turkcell Süper Kupa Şampiyonu! Galatasaray 0-2 Fenerbahçe",
+    images: ['/assets/superkupa-2025-sampiyon.jpg'],
   },
 };
 
