@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import LoadingSplash from "./LoadingSplash";
+import SuperKupaCelebration from "./SuperKupaCelebration";
+import CelebrateButton from "./CelebrateButton";
 
 export default function ClientLayout({ children }: { children: React.ReactNode }) {
     const [isLoading, setIsLoading] = useState(true);
@@ -18,7 +20,10 @@ export default function ClientLayout({ children }: { children: React.ReactNode }
     return (
         <>
             {isLoading && <LoadingSplash />}
+            <SuperKupaCelebration />
+            <CelebrateButton />
             {children}
         </>
     );
 }
+
