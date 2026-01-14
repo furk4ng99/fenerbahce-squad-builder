@@ -1,4 +1,4 @@
-// File: C:\Users\zulkp\.gemini\antigravity\scratch\fenerbahce-squad-builder\src\app\page.tsx
+// File: C:\Users\zulkp\.gemini\antigravity\scratch\fenerbahce-squad-builder\fenerbahce-squad-builder\src\app\page.tsx
 import * as entry from '../../../src/app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

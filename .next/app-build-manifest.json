@@ -11,16 +11,6 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/tournament/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/tournament/page.js"
-    ],
-    "/duel/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/duel/page.js"
-    ],
     "/kadro-olusturucu/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
