@@ -61,7 +61,7 @@ export function ShareButton({ targetRef }: ShareButtonProps) {
         return lines.join("\n");
     };
 
-    // Copy to clipboard (image preferred, text fallback)
+    // Copy to clipboard (or Share on mobile)
     const handleCopy = async () => {
         const element = document.getElementById("squad-export-area") || document.getElementById("squad-pitch");
         if (!element) {
@@ -71,58 +71,84 @@ export function ShareButton({ targetRef }: ShareButtonProps) {
 
         setIsCopying(true);
         try {
-            // Check if Clipboard API with images is supported
-            const canCopyImage = typeof ClipboardItem !== "undefined" &&
-                navigator.clipboard?.write;
+            // Generate text summary first (sync) to have it ready as fallback
+            const textSummary = generateTextSummary();
 
-            if (canCopyImage) {
-                // Try image copy
-                await document.fonts.ready;
-                await new Promise((resolve) => setTimeout(resolve, 300));
+            // 1. Generate Image
+            await document.fonts.ready;
+            // Wait slightly for UI to settle (e.g. if images are loading)
+            await new Promise((resolve) => setTimeout(resolve, 300));
 
-                const canvas = await html2canvas(element, {
-                    backgroundColor: null,
-                    scale: 2,
-                    logging: false,
-                    useCORS: true,
-                    allowTaint: false,
-                });
+            const canvas = await html2canvas(element, {
+                backgroundColor: null,
+                scale: 2,
+                logging: false,
+                useCORS: true,
+                allowTaint: false,
+            });
 
-                canvas.toBlob(async (blob) => {
-                    if (blob) {
-                        try {
-                            const item = new ClipboardItem({ "image/png": blob });
-                            await navigator.clipboard.write([item]);
-                            showToast("Panoya kopyalandı! 📋", "success");
-                        } catch (e) {
-                            // Image copy failed, fallback to text
-                            console.warn("Image copy failed, falling back to text:", e);
-                            await navigator.clipboard.writeText(generateTextSummary());
-                            showToast("Görsel kopyalanamadı, metin kopyalandı", "info");
-                        }
-                    } else {
-                        // Blob creation failed, fallback to text
-                        await navigator.clipboard.writeText(generateTextSummary());
+            canvas.toBlob(async (blob) => {
+                if (!blob) {
+                    // Blob failure -> Text fallback
+                    try {
+                        await navigator.clipboard.writeText(textSummary);
                         showToast("Görsel oluşturulamadı, metin kopyalandı", "info");
+                    } catch {
+                        showToast("Kopyalama başarısız", "error");
                     }
                     setIsCopying(false);
-                }, "image/png");
-                return;
-            } else {
-                // No image clipboard support, use text
-                await navigator.clipboard.writeText(generateTextSummary());
-                showToast("Metin olarak kopyalandı", "info");
-            }
+                    return;
+                }
+
+                const file = new File([blob], "fenerbahce-kadro.png", { type: "image/png" });
+
+                // 2. Try Web Share API (Best for Mobile)
+                if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
+                    try {
+                        await navigator.share({
+                            files: [file],
+                            title: 'Fenerbahçe Kadrom',
+                            text: textSummary,
+                        });
+                        // Share successful
+                        setIsCopying(false);
+                        return;
+                    } catch (shareError) {
+                        // User cancelled share or other error -> proceed to clipboard fallback
+                        console.log("Share API skipped/failed:", shareError);
+                    }
+                }
+
+                // 3. Try Clipboard API (Image)
+                try {
+                    const item = new ClipboardItem({ "image/png": blob });
+                    await navigator.clipboard.write([item]);
+                    showToast("Panoya kopyalandı! 📋", "success");
+                } catch (clipboardError) {
+                    console.warn("Image copy failed, falling back to text:", clipboardError);
+
+                    // 4. Try Clipboard API (Text Fallback)
+                    try {
+                        await navigator.clipboard.writeText(textSummary);
+                        showToast("Görsel kopyalanamadı, metin kopyalandı", "info");
+                    } catch (textError) {
+                        console.error("Text copy failed:", textError);
+                        showToast("Kopyalama başarısız", "error");
+                    }
+                }
+
+                setIsCopying(false);
+            }, "image/png");
+
         } catch (error) {
-            console.error("Copy failed:", error);
-            // Last resort: try text copy
+            console.error("Global copy error:", error);
+            // Critical fallback
             try {
                 await navigator.clipboard.writeText(generateTextSummary());
-                showToast("Metin olarak kopyalandı", "info");
+                showToast("Metin olarak kopyalandı (Hata sonrası)", "info");
             } catch {
-                showToast("Kopyalama başarısız", "error");
+                showToast("İşlem başarısız", "error");
             }
-        } finally {
             setIsCopying(false);
         }
     };
