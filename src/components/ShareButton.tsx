@@ -61,7 +61,7 @@ export function ShareButton({ targetRef }: ShareButtonProps) {
         return lines.join("\n");
     };
 
-    // Copy to clipboard (or Share on mobile)
+    // Copy to clipboard (iOS/Safari Optimized with Promise pattern)
     const handleCopy = async () => {
         const element = document.getElementById("squad-export-area") || document.getElementById("squad-pitch");
         if (!element) {
@@ -70,85 +70,60 @@ export function ShareButton({ targetRef }: ShareButtonProps) {
         }
 
         setIsCopying(true);
+        const textSummary = generateTextSummary();
+
         try {
-            // Generate text summary first (sync) to have it ready as fallback
-            const textSummary = generateTextSummary();
-
-            // 1. Generate Image
-            await document.fonts.ready;
-            // Wait slightly for UI to settle (e.g. if images are loading)
-            await new Promise((resolve) => setTimeout(resolve, 300));
-
-            const canvas = await html2canvas(element, {
-                backgroundColor: null,
-                scale: 2,
-                logging: false,
-                useCORS: true,
-                allowTaint: false,
-            });
-
-            canvas.toBlob(async (blob) => {
-                if (!blob) {
-                    // Blob failure -> Text fallback
+            // Check for ClipboardItem support
+            if (typeof ClipboardItem !== "undefined" && navigator.clipboard?.write) {
+                // Create a Promise that resolves to the Blob
+                // This allows us to call write() immediately (satisfying Safari's gesture requirement)
+                // while generating the image in the background.
+                const blobPromise = new Promise<Blob | null>(async (resolve, reject) => {
                     try {
-                        await navigator.clipboard.writeText(textSummary);
-                        showToast("Görsel oluşturulamadı, metin kopyalandı", "info");
-                    } catch {
-                        showToast("Kopyalama başarısız", "error");
-                    }
-                    setIsCopying(false);
-                    return;
-                }
+                        await document.fonts.ready;
+                        await new Promise((r) => setTimeout(r, 150)); // Short stabilization wait
 
-                const file = new File([blob], "fenerbahce-kadro.png", { type: "image/png" });
-
-                // 2. Try Web Share API (Best for Mobile)
-                if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
-                    try {
-                        await navigator.share({
-                            files: [file],
-                            title: 'Fenerbahçe Kadrom',
-                            text: textSummary,
+                        const canvas = await html2canvas(element, {
+                            backgroundColor: null,
+                            scale: 2,
+                            logging: false,
+                            useCORS: true,
+                            allowTaint: false,
                         });
-                        // Share successful
-                        setIsCopying(false);
-                        return;
-                    } catch (shareError) {
-                        // User cancelled share or other error -> proceed to clipboard fallback
-                        console.log("Share API skipped/failed:", shareError);
+
+                        canvas.toBlob((blob) => {
+                            if (blob) resolve(blob);
+                            else reject(new Error("Blob failed"));
+                        }, "image/png");
+                    } catch (error) {
+                        reject(error);
                     }
-                }
+                });
 
-                // 3. Try Clipboard API (Image)
-                try {
-                    const item = new ClipboardItem({ "image/png": blob });
-                    await navigator.clipboard.write([item]);
-                    showToast("Panoya kopyalandı! 📋", "success");
-                } catch (clipboardError) {
-                    console.warn("Image copy failed, falling back to text:", clipboardError);
+                // Safari requires the Promise to be passed directly to ClipboardItem
+                // We cast to any because TS definition might not explicitly support Promise<Blob> yet
+                const item = new ClipboardItem({
+                    "image/png": blobPromise as unknown as Blob
+                });
 
-                    // 4. Try Clipboard API (Text Fallback)
-                    try {
-                        await navigator.clipboard.writeText(textSummary);
-                        showToast("Görsel kopyalanamadı, metin kopyalandı", "info");
-                    } catch (textError) {
-                        console.error("Text copy failed:", textError);
-                        showToast("Kopyalama başarısız", "error");
-                    }
-                }
-
-                setIsCopying(false);
-            }, "image/png");
-
-        } catch (error) {
-            console.error("Global copy error:", error);
-            // Critical fallback
-            try {
-                await navigator.clipboard.writeText(generateTextSummary());
-                showToast("Metin olarak kopyalandı (Hata sonrası)", "info");
-            } catch {
-                showToast("İşlem başarısız", "error");
+                await navigator.clipboard.write([item]);
+                showToast("Panoya kopyalandı! 📋", "success");
+            } else {
+                throw new Error("Clipboard API not supported");
             }
+        } catch (error) {
+            console.error("Image copy failed:", error);
+            // Fallback to text copy
+            // Note: If the image generation took too long and failed, this might also fail on iOS
+            // due to lost gesture. But it's our best fallback.
+            try {
+                await navigator.clipboard.writeText(textSummary);
+                showToast("Görsel oluşturulamadı, metin kopyalandı", "info");
+            } catch (textError) {
+                console.error("Fallback text copy failed:", textError);
+                showToast("Kopyalama başarısız (İzinleri kontrol edin)", "error");
+            }
+        } finally {
             setIsCopying(false);
         }
     };
