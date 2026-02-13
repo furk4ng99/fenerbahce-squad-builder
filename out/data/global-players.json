@@ -430487,6 +430487,15 @@
       "value": 0,
       "image": "https://img.a.transfermarkt.technology/portrait/big/697149-1671038344.png?lm=1",
       "club": "Galatasaray"
+    },
+    {
+      "id": "global-225083",
+      "name": "N'Golo Kanté",
+      "position": "CM",
+      "rating": 75,
+      "value": 0,
+      "image": "https://img.a.transfermarkt.technology/portrait/big/225083-1703279938.png?lm=1",
+      "club": "Al-Ittihad Club"
     }
   ]
 }
