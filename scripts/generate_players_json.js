@@ -15,6 +15,7 @@ const headers = lines[0].split(',');
 const idIdx = headers.indexOf('player_id');
 const nameIdx = headers.indexOf('player_name');
 const imageIdx = headers.indexOf('player_image_url');
+const detailedPositionIdx = headers.indexOf('position');
 const positionIdx = headers.indexOf('main_position');
 const clubIdIdx = headers.indexOf('current_club_id');
 const clubNameIdx = headers.indexOf('current_club_name');
@@ -28,6 +29,22 @@ const positionMap = {
     'Midfield': 'CM',
     'Attack': 'ST',
     // More specific mappings can be added
+};
+
+const detailedPositionMap = {
+    'Goalkeeper': 'GK',
+    'Defender - Left-Back': 'LB',
+    'Defender - Right-Back': 'RB',
+    'Defender - Centre-Back': 'CB',
+    'Midfield - Defensive Midfield': 'CDM',
+    'Midfield - Central Midfield': 'CM',
+    'Midfield - Attacking Midfield': 'CAM',
+    'Midfield - Left Midfield': 'LM',
+    'Midfield - Right Midfield': 'RM',
+    'Attack - Left Winger': 'LW',
+    'Attack - Right Winger': 'RW',
+    'Attack - Centre-Forward': 'ST',
+    'Attack - Second Striker': 'ST',
 };
 
 const players = [];
@@ -57,6 +74,7 @@ for (let i = 1; i < lines.length; i++) {
     const playerId = fields[idIdx];
     let playerName = fields[nameIdx] || '';
     const playerImage = fields[imageIdx] || '';
+    const detailedPosition = fields[detailedPositionIdx] || '';
     const mainPosition = fields[positionIdx] || 'Midfield';
     const clubName = fields[clubNameIdx] || '';
 
@@ -66,7 +84,7 @@ for (let i = 1; i < lines.length; i++) {
     if (!playerId || !playerName) continue;
 
     // Map position
-    const position = positionMap[mainPosition] || 'CM';
+    const position = detailedPositionMap[detailedPosition] || positionMap[mainPosition] || 'CM';
 
     players.push({
         id: `global-${playerId}`,

@@ -430496,6 +430496,24 @@
       "value": 0,
       "image": "https://img.a.transfermarkt.technology/portrait/big/225083-1703279938.png?lm=1",
       "club": "Al-Ittihad Club"
+    },
+    {
+      "id": "global-323910",
+      "name": "Mauro Júnior",
+      "position": "LB",
+      "rating": 75,
+      "value": 0,
+      "image": "https://img.a.transfermarkt.technology/portrait/big/323910-1730843589.jpg?lm=1",
+      "club": "Fenerbahce"
+    },
+    {
+      "id": "global-1133736",
+      "name": "Amara Diouf",
+      "position": "RW",
+      "rating": 75,
+      "value": 0,
+      "image": "https://img.a.transfermarkt.technology/portrait/big/1133736-1684558546.jpg?lm=1",
+      "club": "Génération Foot"
     }
   ]
 }
