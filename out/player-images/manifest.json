@@ -1,0 +1,2057 @@
+{
+  "version": 1,
+  "generatedAt": "2026-07-21T16:03:53.117Z",
+  "tileSize": 128,
+  "maxColumns": 16,
+  "uniqueImages": 35586,
+  "buckets": {
+    "10": {
+      "file": "sprite-10.webp",
+      "signature": "bd9e65f55d2ea8f859153aca5466aa3718fe2cb8ab71309488e10a3c0bc2c605",
+      "count": 152,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "11": {
+      "file": "sprite-11.webp",
+      "signature": "6524599ef6dd0ed0ee9ed050a09c5b3dd1eaa98d0160a6ef65f463ddb3ea55dc",
+      "count": 132,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "12": {
+      "file": "sprite-12.webp",
+      "signature": "6e75544ef7bc5ebe8ae963a2bc6675b991e0570bcb616d2d69ff70e73948c9c9",
+      "count": 137,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "13": {
+      "file": "sprite-13.webp",
+      "signature": "02c03761d1cad5b1f3299e1b0e934ceebbbc6e9d2d3cfcc15c09e40aeffe0f73",
+      "count": 129,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "14": {
+      "file": "sprite-14.webp",
+      "signature": "d4a22890c8084e8c35e0022af34ba060dcad3276b191c44a634fe0422bf31db7",
+      "count": 163,
+      "columns": 16,
+      "rows": 11,
+      "failures": 0
+    },
+    "15": {
+      "file": "sprite-15.webp",
+      "signature": "f582fddadc4bdf42a1ec62c310ada7c995b713463cfe5a23ef9fe61fb2134a31",
+      "count": 120,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "16": {
+      "file": "sprite-16.webp",
+      "signature": "10d8562a7ad38ae4860f804dd8b58dba480748cf5bc4e06671bf24db5d0ca5ee",
+      "count": 165,
+      "columns": 16,
+      "rows": 11,
+      "failures": 0
+    },
+    "17": {
+      "file": "sprite-17.webp",
+      "signature": "d079e9cbbb2505acd3447f7fd3417c85fae96163149113ca7e112fc0853c06d2",
+      "count": 146,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "18": {
+      "file": "sprite-18.webp",
+      "signature": "cc752df2bbee045e1b768a24042d3fde96a129e951f5aae7b680e9ab2918aa9b",
+      "count": 135,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "19": {
+      "file": "sprite-19.webp",
+      "signature": "9c3c47270c2028b64882b803158b32372a43524d870b8f0fe71b6ecb63a7c131",
+      "count": 137,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "20": {
+      "file": "sprite-20.webp",
+      "signature": "a9492b91a24c88a27bc0802db8f3ef40f10d07607124e41f21a8af28c77c22fa",
+      "count": 141,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "21": {
+      "file": "sprite-21.webp",
+      "signature": "7ffd69ec734fea9ddfc074faa716f66cb4056ab60ee9b70895df2f7a706f25ec",
+      "count": 134,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "22": {
+      "file": "sprite-22.webp",
+      "signature": "88212d58bbe07bd3ef652ea4c2997a276a84918c44a3058e151b2cc880c59b41",
+      "count": 111,
+      "columns": 16,
+      "rows": 7,
+      "failures": 0
+    },
+    "23": {
+      "file": "sprite-23.webp",
+      "signature": "d7486bd0a23abbace4f674afc3783ead3bdad0c3fa86f434f40c93879c3cb007",
+      "count": 145,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "24": {
+      "file": "sprite-24.webp",
+      "signature": "26614324beb7ab3a395d29858dbdd29410d76ef206f22212defbfdafbb18d51a",
+      "count": 131,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "25": {
+      "file": "sprite-25.webp",
+      "signature": "93fe1f23e2da1c56bb932a3ee453183186d97f985bf9fb9e6f5792861f1e66c0",
+      "count": 133,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "26": {
+      "file": "sprite-26.webp",
+      "signature": "3e461caeb9bf153c1879cacd4462c34a06e721b81d3dff5d4124d3bbb2437033",
+      "count": 144,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "27": {
+      "file": "sprite-27.webp",
+      "signature": "7c2306036db516dc97e85f9aa1eef5d568685dc9f7331a6630a6cc90aaf4efa8",
+      "count": 149,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "28": {
+      "file": "sprite-28.webp",
+      "signature": "7d55afde2f1a4bbcd35ff0fdbeea88221a3e955dd209d54d5f91b09d38cf1882",
+      "count": 144,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "29": {
+      "file": "sprite-29.webp",
+      "signature": "884d28a15841e2f1d39983fc74115415f3d5098c9a4c955cfe09ecfd8bec02be",
+      "count": 143,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "30": {
+      "file": "sprite-30.webp",
+      "signature": "07ebc857129dbc8ad2b31bbe5b7edb7fddd7666ef5e94f6104e53474b2d5cd6d",
+      "count": 146,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "31": {
+      "file": "sprite-31.webp",
+      "signature": "fd1bc7d93cbadbffa1dbfe7252f9b257f42ec6c705629b5dff92be94ba5e6bc5",
+      "count": 139,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "32": {
+      "file": "sprite-32.webp",
+      "signature": "7b86777d05a5437e6b67e8c106d404146b7448bfe97a78d846f365718c1b0495",
+      "count": 132,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "33": {
+      "file": "sprite-33.webp",
+      "signature": "a78b30dbf943f85e8f7188af7a14c782ea8e65ce145e58b9cc9a0ac91ea215b2",
+      "count": 152,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "34": {
+      "file": "sprite-34.webp",
+      "signature": "5a6b33f309e06f292f73491106519aac0d648c3b453e74440e71848dca838a9d",
+      "count": 141,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "35": {
+      "file": "sprite-35.webp",
+      "signature": "dcf600937a7df509532869df1828d88c1891d0906b18da576dbae65e636cf3b7",
+      "count": 168,
+      "columns": 16,
+      "rows": 11,
+      "failures": 0
+    },
+    "36": {
+      "file": "sprite-36.webp",
+      "signature": "e19978cfef079a82678d4874bba44ab30fd6714ad0612a835ff08e092b538550",
+      "count": 136,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "37": {
+      "file": "sprite-37.webp",
+      "signature": "abadd19fcb111d3f9832e6e0a6fc74e001f9574ad4410ca5143e3a0b6addd768",
+      "count": 117,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "38": {
+      "file": "sprite-38.webp",
+      "signature": "7a424c5187f97f87ffd2b9e667bdfcd22903af2f1070225edfb6ee91c3eccfa8",
+      "count": 134,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "39": {
+      "file": "sprite-39.webp",
+      "signature": "91f98418d9b55b4ceb35574cc7e39dedaa0e79aedad4aa3e05b8370f9de571f6",
+      "count": 128,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "40": {
+      "file": "sprite-40.webp",
+      "signature": "7c74a7d86f5dbe4d69b610fad0a2c4f20d1d4a663b3256ec9e691fa8e1f33728",
+      "count": 150,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "41": {
+      "file": "sprite-41.webp",
+      "signature": "8babaa082c8b54afe2adb5bc9afebbc4ebf3fb84cbae524af05814fbd8770e2a",
+      "count": 127,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "42": {
+      "file": "sprite-42.webp",
+      "signature": "cd18cf72ef2af01785c52f1ced8ec7174e1d80ed4da13fba825b511f7900ee05",
+      "count": 145,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "43": {
+      "file": "sprite-43.webp",
+      "signature": "c41bcaa02253171e9b64fbd7547aab3408a0f46320493e7a1b74a275aed9841b",
+      "count": 131,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "44": {
+      "file": "sprite-44.webp",
+      "signature": "999dbaaecdf2505a3d6f01e41aa092f73f55da4a04fea8ac5fb78e31bfcdf248",
+      "count": 140,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "45": {
+      "file": "sprite-45.webp",
+      "signature": "4619138e49bc1095cb34b5b38cbab75259f012ab545723845b50b7288f6d0b09",
+      "count": 128,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "46": {
+      "file": "sprite-46.webp",
+      "signature": "d1f7076a33b973c35fe09947a9c542190094a3f0f55f56cf2a06e3fa7adf8448",
+      "count": 130,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "47": {
+      "file": "sprite-47.webp",
+      "signature": "88f00dd8fb623b6f9795a43daa8cdd5c8e0d175bf3438dd1a7354dd1dbbe7d20",
+      "count": 142,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "48": {
+      "file": "sprite-48.webp",
+      "signature": "c8c58ad77fde1d884e6b55d9592faf8ebcef7cf884b3b718632ee5ea821a36a9",
+      "count": 163,
+      "columns": 16,
+      "rows": 11,
+      "failures": 0
+    },
+    "49": {
+      "file": "sprite-49.webp",
+      "signature": "d24132b82c36bb0e6c15d6bef7c564808622e83556e073a7ef4ec4400f4d0650",
+      "count": 168,
+      "columns": 16,
+      "rows": 11,
+      "failures": 0
+    },
+    "50": {
+      "file": "sprite-50.webp",
+      "signature": "2b11ec1ee316af1e1d84dac30c31b824d6f1623361a32544a158bd4c80199d13",
+      "count": 122,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "51": {
+      "file": "sprite-51.webp",
+      "signature": "3076858be90f77d8d31d8a058641c7963cd53e02144f0105e4e5bd57292e6c37",
+      "count": 132,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "52": {
+      "file": "sprite-52.webp",
+      "signature": "797314eb2bda053e2759472daa975f2dc5586f62ba936afb54003649349f84b3",
+      "count": 141,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "53": {
+      "file": "sprite-53.webp",
+      "signature": "cf05792721c2e00cba7fcf6fadfe46ca4953b1618af97b248dfedb0097e67762",
+      "count": 158,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "54": {
+      "file": "sprite-54.webp",
+      "signature": "4eb88a678ffe50068015c7b46d81e64a452ae8ad0556d4ac692e510b853948c1",
+      "count": 132,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "55": {
+      "file": "sprite-55.webp",
+      "signature": "c1e9bcd36d3d50b9219c3dc4bfc483c9047ff7673e591a09a67f4fc7da0e2706",
+      "count": 149,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "56": {
+      "file": "sprite-56.webp",
+      "signature": "3b2a28ed85e97f94b96276373767ed3ae7bb6db21e0dc6b93d75765191b15255",
+      "count": 133,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "57": {
+      "file": "sprite-57.webp",
+      "signature": "d44394ba85d7b5da4ce8553450b5c1fa7a70a079530699aca3b372123044c98f",
+      "count": 133,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "58": {
+      "file": "sprite-58.webp",
+      "signature": "d0dd82403dfd0830ebe9f03639c33f20d2bea168ad8521b07957b3026bb8642e",
+      "count": 146,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "59": {
+      "file": "sprite-59.webp",
+      "signature": "27d1ca339b150c9c5a5af2c9aef871ff4b9ea6fed6213f4cc21caf32d1fc2a64",
+      "count": 140,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "60": {
+      "file": "sprite-60.webp",
+      "signature": "bbef730aa1f660790b1c0bb7fffade41844a5653f896b6ede1c6079b7fdd1016",
+      "count": 154,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "61": {
+      "file": "sprite-61.webp",
+      "signature": "4b01e7620b1a8c158849d841877ff98d45f10d062dd2bbdbed4c6177338d6a3c",
+      "count": 156,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "62": {
+      "file": "sprite-62.webp",
+      "signature": "1b55f9d08da38e7615a7957caf089796037dd2d04dfeb1ba2ac860217f8790f9",
+      "count": 141,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "63": {
+      "file": "sprite-63.webp",
+      "signature": "f52d15f08c859ae3b30ad62fa401cfeddd2d1af983571d56bdc4e0808b02d766",
+      "count": 154,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "64": {
+      "file": "sprite-64.webp",
+      "signature": "452153cc7b5e46bfad810798bcaaf07a10424601f046a663d038603e67527e28",
+      "count": 128,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "65": {
+      "file": "sprite-65.webp",
+      "signature": "c7794178704f7e5980d032fb7b9108ff986e4963e14a4b20720b223f882872e5",
+      "count": 141,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "66": {
+      "file": "sprite-66.webp",
+      "signature": "434d824401bc63ac777287948ede7b781ea7739c67dbec37458bcc76c0fc36b3",
+      "count": 147,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "67": {
+      "file": "sprite-67.webp",
+      "signature": "5a88bf3718ed76a50e374ea6727dbdf819e53223eae8a7171d5884d39da67dcf",
+      "count": 153,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "68": {
+      "file": "sprite-68.webp",
+      "signature": "042f5d0763ae1ea643e356aef521cf49f2ed25b8ce79466bc96cddaa59555d8a",
+      "count": 164,
+      "columns": 16,
+      "rows": 11,
+      "failures": 0
+    },
+    "69": {
+      "file": "sprite-69.webp",
+      "signature": "7487c656696014bbe885405f27a1fa6fe30e73da552ed49dbee89911daaa2e91",
+      "count": 151,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "70": {
+      "file": "sprite-70.webp",
+      "signature": "fad113f0ae1c64ecfe0111bef2cb194b6c351e799300d19583a403156be272d1",
+      "count": 157,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "71": {
+      "file": "sprite-71.webp",
+      "signature": "f1a53573323059221eb6811e8a03a4d1459843cecadf5fcfdedc4f6fdda7e2f9",
+      "count": 155,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "72": {
+      "file": "sprite-72.webp",
+      "signature": "5f62622f0853416ad15a6493aa5fda81389fff35867333e5d517b5fff91e551e",
+      "count": 140,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "73": {
+      "file": "sprite-73.webp",
+      "signature": "8d16186b2250acd1b8003f1d134c32eb5d5b51a24b70ec814052c456001b53db",
+      "count": 149,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "74": {
+      "file": "sprite-74.webp",
+      "signature": "6e81225fc745fb5b1ec607616f5b717bd027ad01467de1e2c111c025d839bbd4",
+      "count": 136,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "75": {
+      "file": "sprite-75.webp",
+      "signature": "6392d0b4653a927626c4951bf1db6a0c54d8762c293696b78bbf858214c3bc20",
+      "count": 131,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "76": {
+      "file": "sprite-76.webp",
+      "signature": "76a6a2e0732f59d76dfa8052448dc642446c18b7a1d97c507dd1b739d313ca29",
+      "count": 121,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "77": {
+      "file": "sprite-77.webp",
+      "signature": "39d29dbed9e83eab578662dc94c0244a75fa5c3b26d919c18cc9b81672632d85",
+      "count": 154,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "78": {
+      "file": "sprite-78.webp",
+      "signature": "8af27219bcb8a58f64a84ae8a031cfb61032fc38e41048230d6e33a8d390ecb5",
+      "count": 122,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "79": {
+      "file": "sprite-79.webp",
+      "signature": "6c6e459ea1a49f2db9f411fb2f58bb74302bab49f26d46e4d54a65ad2683f92d",
+      "count": 127,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "80": {
+      "file": "sprite-80.webp",
+      "signature": "4384f659f0e38b7294c4f50801899407cf704e00177808d7c0c0051c2725b5d3",
+      "count": 124,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "81": {
+      "file": "sprite-81.webp",
+      "signature": "cd2b8f179431e749191aa7019dfb5facfe9fa5a531880c6c246758a05c8de2ed",
+      "count": 139,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "82": {
+      "file": "sprite-82.webp",
+      "signature": "09870212abf0b2d252ad4c43f025b8a04cb8f3ddf89a47d2064c300aff9bc1fb",
+      "count": 133,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "83": {
+      "file": "sprite-83.webp",
+      "signature": "990770419fc4c44c8ff43a7f556ca4bbf191e7c6782630c4757c40cf30d7d042",
+      "count": 136,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "84": {
+      "file": "sprite-84.webp",
+      "signature": "98be0327eb875d7b0946d29826d3bd40cff45f749e1e79a97bd7a81bae55c64d",
+      "count": 151,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "85": {
+      "file": "sprite-85.webp",
+      "signature": "061ad8f0d98c8d28507d9c087e909815315660299e0ce155dba32c2947cba603",
+      "count": 137,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "86": {
+      "file": "sprite-86.webp",
+      "signature": "0ff5f5141790256a125e44b5a4270fc4e4209c39c1dd245592b5c0744b212e37",
+      "count": 130,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "87": {
+      "file": "sprite-87.webp",
+      "signature": "04d3ee73c108f020cdea533b4fed859960622a51d60c4ac68b0550516518bf15",
+      "count": 149,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "88": {
+      "file": "sprite-88.webp",
+      "signature": "95b72e0f2e49ed1da59b4b1536d212843569dffa6ecdeb29980efb811ede7db7",
+      "count": 137,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "89": {
+      "file": "sprite-89.webp",
+      "signature": "6a6f677390b204e976bbc4b3cb24d8f7b0dfa45185bc289f3bf1521c82496e1d",
+      "count": 135,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "90": {
+      "file": "sprite-90.webp",
+      "signature": "c5557c789e66bf76cb3d6dd9e340dc48cc7f0503d3312a51828f31da6384ef33",
+      "count": 142,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "91": {
+      "file": "sprite-91.webp",
+      "signature": "561cdcc4864771463c385a1a743abe97afa2660cf5c547a70a6ef8033852cb84",
+      "count": 131,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "92": {
+      "file": "sprite-92.webp",
+      "signature": "c9dbc0f9345306ef84c61943a69899bbc6ecd3cbf548cca3c6a32d11b263494f",
+      "count": 127,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "93": {
+      "file": "sprite-93.webp",
+      "signature": "57cf8ee8e6be8adee3518fec53c290094317dfecd4282536f340c854bc900b14",
+      "count": 133,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "94": {
+      "file": "sprite-94.webp",
+      "signature": "6573cb960f1643f7c35ca3bb1c1654d71d323b331b63b147008c8296933f3b82",
+      "count": 130,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "95": {
+      "file": "sprite-95.webp",
+      "signature": "1515954af6b92b1f2d348a0d674279420bd0da9ce0b25ecc2bb0a724935f7551",
+      "count": 136,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "96": {
+      "file": "sprite-96.webp",
+      "signature": "1b141fd7c081c55353dba727da7420ab24e01de478f00f651dd35604330185b3",
+      "count": 137,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "97": {
+      "file": "sprite-97.webp",
+      "signature": "69479dee27b607e189868451456bf53b6f8e40ac24169e2c22c345aafd83b10c",
+      "count": 142,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "98": {
+      "file": "sprite-98.webp",
+      "signature": "f87cd8189f33df080ea2f438a889c940fb3d99bf7e50f0bf0b2c069e5842dcbe",
+      "count": 143,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "99": {
+      "file": "sprite-99.webp",
+      "signature": "263829ea0fd155f975b42c4346c6be737d589344cb0900d3b348ad193be5fd81",
+      "count": 160,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "00": {
+      "file": "sprite-00.webp",
+      "signature": "803ca08432f9e80b81158e95914a167f55a2094bb8b6927adcca95f04e89bddb",
+      "count": 128,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "01": {
+      "file": "sprite-01.webp",
+      "signature": "831d58afdedec7cb48ea3276955deaacbc9afd7473353a22151903378b209cef",
+      "count": 136,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "02": {
+      "file": "sprite-02.webp",
+      "signature": "78b48f8fcff591bc9c1a7a082c4392fdd32a66121bb708e785966df01d25ad95",
+      "count": 142,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "03": {
+      "file": "sprite-03.webp",
+      "signature": "1f5e3a4bfe9d90a6067d17b80308c3fe1ae8cf979de3a905ff6e58dea90db33f",
+      "count": 139,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "04": {
+      "file": "sprite-04.webp",
+      "signature": "e7119cd6dd1c93da73bb5dbc586628b5cf9c4d56526651fef6aeb12ee8016edd",
+      "count": 140,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "05": {
+      "file": "sprite-05.webp",
+      "signature": "7ecd34a77ec2e9f93c5d907f11ef61f29787006ded42404269c59a39f964960d",
+      "count": 135,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "06": {
+      "file": "sprite-06.webp",
+      "signature": "651fef108f18fd7cb7012b609b2ba7b2d10ea1f66639a6815ca5655d2fb11891",
+      "count": 147,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "07": {
+      "file": "sprite-07.webp",
+      "signature": "0fb1aa8f49380591840500435a6bbe747dc9d10b1b1056e07597ea4699d23f62",
+      "count": 126,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "08": {
+      "file": "sprite-08.webp",
+      "signature": "ab7c87fc260167ce3c13d9b284a88be95ff359ea2b2c93570802e5819391b990",
+      "count": 139,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "09": {
+      "file": "sprite-09.webp",
+      "signature": "c071fd62fd98d7ffdc0a18ad469d4525c7afbb8d6a667b1f857041e9ea3ded3c",
+      "count": 160,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "0a": {
+      "file": "sprite-0a.webp",
+      "signature": "f4188e2bec186553aa687691edcf296938cc793819ed7ecfe97cef8a6d8b58c1",
+      "count": 134,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "0b": {
+      "file": "sprite-0b.webp",
+      "signature": "3a12ccbb750e1620970ae5282ad1f0d333ab9acbf97b41c393baaa0d4cd4c441",
+      "count": 137,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "0c": {
+      "file": "sprite-0c.webp",
+      "signature": "1da9928d2a693066224d5362d5268661f52eba399d205ba3ebb9e083cfb5ca91",
+      "count": 146,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "0d": {
+      "file": "sprite-0d.webp",
+      "signature": "d08063491f8a4dfdea81fc0be255d60b88fa61486d3901e8133c8cbcefbee208",
+      "count": 143,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "0e": {
+      "file": "sprite-0e.webp",
+      "signature": "a2bfc075d5501d22a9119dfd2ffdd04071a15985e035c4cf50b01c77dc880840",
+      "count": 148,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "0f": {
+      "file": "sprite-0f.webp",
+      "signature": "5092bce2b77ebdb96c82c608a633e06b5b90ef3b06982e1c869536b019a305d0",
+      "count": 139,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "1a": {
+      "file": "sprite-1a.webp",
+      "signature": "f942e1b7d1e27efa6a6bfb36e46d73c0c1fa1c466976f8c8ab269dd313d71de0",
+      "count": 135,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "1b": {
+      "file": "sprite-1b.webp",
+      "signature": "d78edc7629dee13ccec3de1396074529ac1c5d551c3846c09e16433fefa07dc9",
+      "count": 136,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "1c": {
+      "file": "sprite-1c.webp",
+      "signature": "bd264076740b6209c535ddcfdb98b21c1f8c3c6fbde98f86b707b05adc9eb7c6",
+      "count": 138,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "1d": {
+      "file": "sprite-1d.webp",
+      "signature": "d9386e4997e4030a6e03ada02bfc04fc4464a3a453a57ddd5e414b6c556f0830",
+      "count": 125,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "1e": {
+      "file": "sprite-1e.webp",
+      "signature": "e748adf17af53d460c7a91040fbbe63db7a17e6b9a2124158b07a33717213a92",
+      "count": 128,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "1f": {
+      "file": "sprite-1f.webp",
+      "signature": "bf4ce85c9198112c8a20d400ddc1df2c5daf4c2bdc24ddd33b892093b708da36",
+      "count": 163,
+      "columns": 16,
+      "rows": 11,
+      "failures": 0
+    },
+    "2a": {
+      "file": "sprite-2a.webp",
+      "signature": "ac67a6a222daaa657a8d89e9fe3cf76b4ac2974c1392e52f5909f574cf847aef",
+      "count": 140,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "2b": {
+      "file": "sprite-2b.webp",
+      "signature": "6676ecf1340ef5b9648d6a128e2ef93e8b4de1cac626f3f84aeae7c34c467253",
+      "count": 158,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "2c": {
+      "file": "sprite-2c.webp",
+      "signature": "c9df84198d382481b1720e085b6c8cefa5a73bb82e6ad70ccb5d36e2df1b4556",
+      "count": 124,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "2d": {
+      "file": "sprite-2d.webp",
+      "signature": "a61ec619b50550ec22234b59fa38ff73431c3dc79b5606e7e57b204a6b2267f5",
+      "count": 132,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "2e": {
+      "file": "sprite-2e.webp",
+      "signature": "4bd01213fb71893fe39751aa9ea43e8de177f6b270479e190df45fc620361366",
+      "count": 138,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "2f": {
+      "file": "sprite-2f.webp",
+      "signature": "cb955cff9fa0603297c10d934d18f77cd037b829bcd382faa76b2c778a0acb17",
+      "count": 147,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "3a": {
+      "file": "sprite-3a.webp",
+      "signature": "5b1e510a64053ce327c187b100cb82f575f77d47d2348f5e551981f55717df59",
+      "count": 123,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "3b": {
+      "file": "sprite-3b.webp",
+      "signature": "77fe3a3e39105110d85f4dcd48d1404055bab7c6a04f6ae2ab550826af777232",
+      "count": 133,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "3c": {
+      "file": "sprite-3c.webp",
+      "signature": "82037aa264a2d505172ed31ec3e061074a1d6648bf5dc181c9dafc0852ad6617",
+      "count": 141,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "3d": {
+      "file": "sprite-3d.webp",
+      "signature": "7545cff1fb95d6262fd7b070b654e61c2e7655b6e21130c3754940d800d45384",
+      "count": 117,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "3e": {
+      "file": "sprite-3e.webp",
+      "signature": "a1fd39de7e7967f1ffab4ac749ae62ff7beb0a81cf1f66fdeebaa3f5764bf8ad",
+      "count": 141,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "3f": {
+      "file": "sprite-3f.webp",
+      "signature": "1364f8c3cb350e51290018bf8083f2ae850fa90ab82b4d59b3e761c6ac674dc4",
+      "count": 159,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "4a": {
+      "file": "sprite-4a.webp",
+      "signature": "72cdbf9e3f4c36325bdfda6b436849c178a4c8b0f5eb37e5602e15805fba3587",
+      "count": 129,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "4b": {
+      "file": "sprite-4b.webp",
+      "signature": "5b1ea953316b838b377bfe0d9e758a6e1b3183f880c234f650e7b9a50d947ad9",
+      "count": 142,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "4c": {
+      "file": "sprite-4c.webp",
+      "signature": "68b785bbae37a0d9ce00fc72b6153d88bbc53d290b5d2a6e8b9885ea7b4c560d",
+      "count": 143,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "4d": {
+      "file": "sprite-4d.webp",
+      "signature": "5de981b24c1c9e85f4546fc76f1840da7d97bde5752f3f6a969595d0fd84c61a",
+      "count": 127,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "4e": {
+      "file": "sprite-4e.webp",
+      "signature": "3cf2c91c153db3d69ccb0656f230b29037ae05d97852889705ce01b7df1db40a",
+      "count": 131,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "4f": {
+      "file": "sprite-4f.webp",
+      "signature": "2ac8bac05c26c796e0a653fd0fda9923226f09f0f8319a0c1e77638b9c13724f",
+      "count": 124,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "5a": {
+      "file": "sprite-5a.webp",
+      "signature": "f15e0af5c2e766a09d54eea88610d6b0d29fb7378501bfd521ed37e539709d03",
+      "count": 130,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "5b": {
+      "file": "sprite-5b.webp",
+      "signature": "9cce9c7b1823482c1a3a639fe278b1f4bbdd5bf72b9961847e5e7869cba6491b",
+      "count": 146,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "5c": {
+      "file": "sprite-5c.webp",
+      "signature": "9866741d2279d7469cc574971cdd18cf159edc3da6f88390373414eded6dc23d",
+      "count": 135,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "5d": {
+      "file": "sprite-5d.webp",
+      "signature": "8e1ea643d8b3cd8a20ad3b5890bbac95c8997658caad761e137e27d9b3eff44c",
+      "count": 142,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "5e": {
+      "file": "sprite-5e.webp",
+      "signature": "5581aa9d191f789fdc94a1d4449da2df2c56ea30ad74677820482fd33de036da",
+      "count": 155,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "5f": {
+      "file": "sprite-5f.webp",
+      "signature": "31f15dbab988557b4ca9d5f9c2d1f5bcc4208b11b3528d63ab624890f5e37c40",
+      "count": 133,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "6a": {
+      "file": "sprite-6a.webp",
+      "signature": "9abb2081249d0cdd110a8a735f3560a126fcd983c5b77d871c335e42f5208af1",
+      "count": 141,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "6b": {
+      "file": "sprite-6b.webp",
+      "signature": "5e90e9e02cd7073f1a3017a6c810636851d8cce76f2ff563526bbe57a8d0a72b",
+      "count": 152,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "6c": {
+      "file": "sprite-6c.webp",
+      "signature": "db3513dda5d758546b5d30bfcfed0ca708a3f7fa320faae0f9e75684fa138d9f",
+      "count": 132,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "6d": {
+      "file": "sprite-6d.webp",
+      "signature": "07914d674ea15a6563abc4451b6ca5f548ca6a04e003f446582aed264ee9c9b2",
+      "count": 153,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "6e": {
+      "file": "sprite-6e.webp",
+      "signature": "b604b923c9f9037901605e85d417b4e680f04a71380724e3cae4a3340dacf1b2",
+      "count": 133,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "6f": {
+      "file": "sprite-6f.webp",
+      "signature": "b7f2fe2f7f98fec63cc43d314930242c98e902f09b8dd9c1d3f123656958e739",
+      "count": 123,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "7a": {
+      "file": "sprite-7a.webp",
+      "signature": "314f01565b9db19fad97619171a6b736bb1b583181352fb56e4371f6b7866fbe",
+      "count": 144,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "7b": {
+      "file": "sprite-7b.webp",
+      "signature": "67dadb0020056a050d44d66a9fa0072fe7fe8b9b82e3ad80d0071b0d5eaeec3d",
+      "count": 158,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "7c": {
+      "file": "sprite-7c.webp",
+      "signature": "8fa6111f87e2f1205b745710490d45b89666d8604181422513a595f115ecd77f",
+      "count": 132,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "7d": {
+      "file": "sprite-7d.webp",
+      "signature": "7340b47934dcbe9aa275d5c90b796042bab532bdabd03549f048daaedcbe3a48",
+      "count": 131,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "7e": {
+      "file": "sprite-7e.webp",
+      "signature": "5e2d427658e1b18949d633de4fc7cbbd09b037b25b2850bab9686edb6c67afe5",
+      "count": 159,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "7f": {
+      "file": "sprite-7f.webp",
+      "signature": "59122194eafb12c7a3ff55a13614d5daff13ba4fd0701fc92485722d447f4ede",
+      "count": 143,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "8a": {
+      "file": "sprite-8a.webp",
+      "signature": "d3b091885b2bd0960c439fd5e08f7ee3d23809c5833117695d52628ad0242bc5",
+      "count": 146,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "8b": {
+      "file": "sprite-8b.webp",
+      "signature": "4c45b53c092e30bfe3792a1edeba972fc1d5e4412376651c5e5f67966ed4269a",
+      "count": 131,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "8c": {
+      "file": "sprite-8c.webp",
+      "signature": "1dd684c383d0a3e72ba47e90e0edd6b384d2ebd12ceb470f1a86f569ecfc96c3",
+      "count": 149,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "8d": {
+      "file": "sprite-8d.webp",
+      "signature": "1754db488e15735fc7e7ae94040cf9efcce5b06ee92db685e6009a2112c73525",
+      "count": 140,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "8e": {
+      "file": "sprite-8e.webp",
+      "signature": "d81c24146f8c2e74f26661d76d772d1e5e7668c7bf4702f7ecdcedc0c918d395",
+      "count": 146,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "8f": {
+      "file": "sprite-8f.webp",
+      "signature": "5060daa9ba93da42ece13ee65e4c31c1b56c41f5b688d1de0f088c57be4002fd",
+      "count": 137,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "9a": {
+      "file": "sprite-9a.webp",
+      "signature": "af2de1f6760ac2f65b2719146af588a8b3fdfea19642cacfab41312ffd42d774",
+      "count": 128,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "9b": {
+      "file": "sprite-9b.webp",
+      "signature": "03273ee5bd98cd523adcbbd5ea3f178502e6195a59f20844820b09911504b96c",
+      "count": 146,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "9c": {
+      "file": "sprite-9c.webp",
+      "signature": "dc11011c4375c3b1210be8df102421d4555fe3f799acdd5bc8b1fcafab90e424",
+      "count": 149,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "9d": {
+      "file": "sprite-9d.webp",
+      "signature": "34137e11cd4ce37d1637013a8a5911607aa0583e2cdf822817c8be562856bf77",
+      "count": 132,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "9e": {
+      "file": "sprite-9e.webp",
+      "signature": "d2aac57cfb94c861d2e364941247bfa9d4b24091ed898b6b89117408645e09a7",
+      "count": 160,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "9f": {
+      "file": "sprite-9f.webp",
+      "signature": "41537ef0ea7be3802430eaca1d22b3791c43ff31ba16997c903cd528eef88d58",
+      "count": 165,
+      "columns": 16,
+      "rows": 11,
+      "failures": 0
+    },
+    "a0": {
+      "file": "sprite-a0.webp",
+      "signature": "25866e9f9dade7abf5078c30e448d6c3d726e3c08391605accdbab2a6317421b",
+      "count": 155,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "a1": {
+      "file": "sprite-a1.webp",
+      "signature": "0b2e3f44e0212d1b4f0ca06cca944b1a978692514cc3c606682f762cdfd09fd6",
+      "count": 144,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "a2": {
+      "file": "sprite-a2.webp",
+      "signature": "b187c04fa8826ea168471cae6e0506675448db7d3ce1ac4e33319077e1d5e27d",
+      "count": 125,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "a3": {
+      "file": "sprite-a3.webp",
+      "signature": "13a78a2bfe429892c5843e37ad50c2b905120da474a0032a2e0d38e912c49b4d",
+      "count": 156,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "a4": {
+      "file": "sprite-a4.webp",
+      "signature": "59efc5072a4e3be71003d2483a5e1a6e63c5d2a9ad591d12216dc66f8e02b65e",
+      "count": 135,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "a5": {
+      "file": "sprite-a5.webp",
+      "signature": "baf34a3689d98b75b9d5179cee54f42318e942f5107533c058154d5c74c5a1a1",
+      "count": 140,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "a6": {
+      "file": "sprite-a6.webp",
+      "signature": "d4853b0bfb278ba0df4089b6ec6de09205e13343a95f64bb156cfa2c2b356b30",
+      "count": 154,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "a7": {
+      "file": "sprite-a7.webp",
+      "signature": "1407144c18fcbdbdd2e6dffb207c73ce7a45fb3aeba19b27bf406c70d84f0d55",
+      "count": 161,
+      "columns": 16,
+      "rows": 11,
+      "failures": 0
+    },
+    "a8": {
+      "file": "sprite-a8.webp",
+      "signature": "7991a91d7cd3a29746b163cc6f9d275c51c8ad9c35f377cee053a4aa956d3e9f",
+      "count": 144,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "a9": {
+      "file": "sprite-a9.webp",
+      "signature": "e836a0588f4f87c3eb7659ec67aa12bfb94d64a025364eb70640ccfe038e25d3",
+      "count": 135,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "aa": {
+      "file": "sprite-aa.webp",
+      "signature": "09cd3f13763635dc488975d262dffd6eeb4cd9443d7d26a2ce572423877d2615",
+      "count": 136,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "ab": {
+      "file": "sprite-ab.webp",
+      "signature": "d197df55ba41dbe368e5fbd8f946c903d471feff8f570522cbd5b3c70a0da579",
+      "count": 140,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "ac": {
+      "file": "sprite-ac.webp",
+      "signature": "ca0a1aab0a4a0c2d0c51e07b4057d122fe4f86756480f0b2b3d97a95d264ad0e",
+      "count": 127,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "ad": {
+      "file": "sprite-ad.webp",
+      "signature": "0444281e9d6d546769cda7d2043b27a8cc9c74c4908c190762a8c35b64a9c4fb",
+      "count": 149,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "ae": {
+      "file": "sprite-ae.webp",
+      "signature": "600ac8a2b0e77a29f55681bf3c72180f5aec32ffac5584ce415d2d36959714c5",
+      "count": 148,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "af": {
+      "file": "sprite-af.webp",
+      "signature": "001b8d2383f0cb3fcf445e0cefd9dcee391dde15589886bf8308b23b756a07b2",
+      "count": 139,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "b0": {
+      "file": "sprite-b0.webp",
+      "signature": "d02b17aa5c26808a0445d5ab75cea76c5c94aa66bf3ba6688766a1fcfe48de18",
+      "count": 135,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "b1": {
+      "file": "sprite-b1.webp",
+      "signature": "cef93cb523c29c8794190e4be91d12edaf262610c1e220251b002f620ceb9bf3",
+      "count": 138,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "b2": {
+      "file": "sprite-b2.webp",
+      "signature": "afa556933d624853c8914ce626bf084d29e6ef803d41886e62df8772be72b287",
+      "count": 140,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "b3": {
+      "file": "sprite-b3.webp",
+      "signature": "2b5380e00295babfc9dcb917fe563b2488e865c9b23b47eaf809d818b015fdb5",
+      "count": 119,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "b4": {
+      "file": "sprite-b4.webp",
+      "signature": "881ddafc23f1b481596e820d2d7c6f280958b51e98611d1a8087280cd8425610",
+      "count": 108,
+      "columns": 16,
+      "rows": 7,
+      "failures": 0
+    },
+    "b5": {
+      "file": "sprite-b5.webp",
+      "signature": "3103123c9e11f6b248452192c28ab1953bb8999b9da0dde39cad3bb249bbf17d",
+      "count": 139,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "b6": {
+      "file": "sprite-b6.webp",
+      "signature": "b3aa3f5103cab40024e181302bfb1391ac76d9bc4ab2eea45335fe601c2516ac",
+      "count": 128,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "b7": {
+      "file": "sprite-b7.webp",
+      "signature": "860f7c61fc4f58efcc2eb368b9b62690149971263c81ee263325b6a6f814b86c",
+      "count": 132,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "b8": {
+      "file": "sprite-b8.webp",
+      "signature": "bfdffb00f96706f1857a8e3ee7dbcd67df357a3f0801a9591f65c41563f7dfb6",
+      "count": 140,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "b9": {
+      "file": "sprite-b9.webp",
+      "signature": "6055f6bcf3f5c90fa6da11c699ab6e85ae114be234fdc75456306b79c58370e6",
+      "count": 138,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "ba": {
+      "file": "sprite-ba.webp",
+      "signature": "8dbfef148b01ca26aa4036b76544efa376b03e090b1ce9b3a21e7b8842f6bfa1",
+      "count": 144,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "bb": {
+      "file": "sprite-bb.webp",
+      "signature": "9082a41f27c001dfab51db76fe06514f72694b8bf456c6daf70047a59d5de089",
+      "count": 149,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "bc": {
+      "file": "sprite-bc.webp",
+      "signature": "c9b64d8b5488aa32d04b1174807a79f646679edcaf63f5e01d13bad3af561c0a",
+      "count": 134,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "bd": {
+      "file": "sprite-bd.webp",
+      "signature": "9456b99fdc031c19b5d196db2eb2fa75ae1c468fa092275f3eaf5c429a16d31f",
+      "count": 147,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "be": {
+      "file": "sprite-be.webp",
+      "signature": "360c376f25adef25ed0610605ff305410001725e8a9845cda98b2f74dd8fcad1",
+      "count": 122,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "bf": {
+      "file": "sprite-bf.webp",
+      "signature": "586eb0c01a10f2e73eb08df60845897472031fbbcf323275f7f1d6f2eaaf5a01",
+      "count": 124,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "c0": {
+      "file": "sprite-c0.webp",
+      "signature": "6fc71a1022f026a11d03e6a667d1fbead94d3921b3567dc3576b23e1d29cb795",
+      "count": 145,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "c1": {
+      "file": "sprite-c1.webp",
+      "signature": "98836999dbab421a76c732b584342964bbfd984764c0992085c6be7b13ae71ee",
+      "count": 136,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "c2": {
+      "file": "sprite-c2.webp",
+      "signature": "5ae9db1f75ad2fde987fbde4bc18f1325d7169c232df39370e56719c68dd799e",
+      "count": 147,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "c3": {
+      "file": "sprite-c3.webp",
+      "signature": "f9a854c7e00a3ead13e2811ce33f6486ca31137ece91a02e3343a95adb1466eb",
+      "count": 121,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "c4": {
+      "file": "sprite-c4.webp",
+      "signature": "903a0ee0bdaeaaf379a0b1e170ceb4aeb795b6c3164e7879d3b61e0ffed45edd",
+      "count": 131,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "c5": {
+      "file": "sprite-c5.webp",
+      "signature": "7fd54b18a848668e595fa7d400f1f85b54f53243c5cc5d47e8e4d7ee4f51dba6",
+      "count": 121,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "c6": {
+      "file": "sprite-c6.webp",
+      "signature": "73fff56db2ee78fa1f466bca05a9077bb019588368e90a4827e8894648ee0fac",
+      "count": 130,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "c7": {
+      "file": "sprite-c7.webp",
+      "signature": "ca4a15ad128cd08afddf73a117c070fa27930f51159669db63ae863151040922",
+      "count": 142,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "c8": {
+      "file": "sprite-c8.webp",
+      "signature": "639b4f9f0d2d5c666064594181223ba705d493f072fcff4ecd722cee53d0dc71",
+      "count": 138,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "c9": {
+      "file": "sprite-c9.webp",
+      "signature": "ba6c9369e6e742328535eaa984820ddb433b58372913ba0540d1055c24e6c4d0",
+      "count": 149,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "ca": {
+      "file": "sprite-ca.webp",
+      "signature": "6b382f8eee0d005bdd82843cad43c811ee7e04ea1d5d6624ffe7cc4b21500cbd",
+      "count": 136,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "cb": {
+      "file": "sprite-cb.webp",
+      "signature": "77508299add806ed471a9ea1b5e7fdc5689a3992e8ab5e189556e168e8be93d2",
+      "count": 140,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "cc": {
+      "file": "sprite-cc.webp",
+      "signature": "a946049a81afa7e9c4ce6e68e4222046c9e0817a85e95b72d767f575239c6ff8",
+      "count": 135,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "cd": {
+      "file": "sprite-cd.webp",
+      "signature": "d815844ab30ac63f985b774ad0897d603addb3094e5d711dcaab8bc588089db1",
+      "count": 142,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "ce": {
+      "file": "sprite-ce.webp",
+      "signature": "01f952d77264b008ddad7ca696b893293449bd810198bd779bd2b6f26b081bc7",
+      "count": 137,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "cf": {
+      "file": "sprite-cf.webp",
+      "signature": "dcd09924a93dcf78e7c697b16fed4a544173288e3fde4e014404f5e04cc6597e",
+      "count": 126,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "d0": {
+      "file": "sprite-d0.webp",
+      "signature": "998c35a0ef796d85cc9e049c297e56ee690348d99af5ef363032e7e6c1e914fd",
+      "count": 147,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "d1": {
+      "file": "sprite-d1.webp",
+      "signature": "f691091d3760041c628890c8f9f41061db26559cd2b24b97446287dd84603fdc",
+      "count": 135,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "d2": {
+      "file": "sprite-d2.webp",
+      "signature": "a0cbad32621809d1bc3f8cf298e6f1912dd0944968a661012e7feb1eb1aa1ac8",
+      "count": 139,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "d3": {
+      "file": "sprite-d3.webp",
+      "signature": "4687007e96d20ef967a50c3f067355128b772853f338834fdddedb30a7120540",
+      "count": 147,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "d4": {
+      "file": "sprite-d4.webp",
+      "signature": "0ad1168a705994be3a22e4f62b25a0928427677a566eda5beb05ba61000ccc19",
+      "count": 148,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "d5": {
+      "file": "sprite-d5.webp",
+      "signature": "ad5317c8fdbd1035c94dc3e87d08de916d6dc647e72116ec42ed4081d8520432",
+      "count": 133,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "d6": {
+      "file": "sprite-d6.webp",
+      "signature": "12a756a4e928dffb7ffa54c6b92f1aea91263bd515e297a15a20982c434d5da9",
+      "count": 158,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "d7": {
+      "file": "sprite-d7.webp",
+      "signature": "3086841aae3a2c1d8c8c1819d7bc2563fbaa37fec2ce8009b6fef4103d332232",
+      "count": 134,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "d8": {
+      "file": "sprite-d8.webp",
+      "signature": "a4db9ef32954704e2c8b4dae8b78d12d1758b19fa8765b59ef0ce55254e2de97",
+      "count": 139,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "d9": {
+      "file": "sprite-d9.webp",
+      "signature": "21838cb08c85afbd2fd395f3116ece1a35446b831555fd6fc2d2d6b4f96511e7",
+      "count": 151,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "da": {
+      "file": "sprite-da.webp",
+      "signature": "3b95a094365806d80c0aa657665610dbda41e54d504866923a740773249014ca",
+      "count": 141,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "db": {
+      "file": "sprite-db.webp",
+      "signature": "678c8c10f60025a4871c99f88bde1a5f6a8d7dc7034f7d8a92df6be9b1ce78cd",
+      "count": 129,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "dc": {
+      "file": "sprite-dc.webp",
+      "signature": "3603739fcc141788502566fa04043cab87c7515f5fe439c90fc95d741296ad3c",
+      "count": 132,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "dd": {
+      "file": "sprite-dd.webp",
+      "signature": "0caef27635b416d61f3ca89acebf25caf67301e3eb22222fd9e40407945fcfea",
+      "count": 135,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "de": {
+      "file": "sprite-de.webp",
+      "signature": "cb143c066f10adcb50662c69aa925d3a6eab5143538ed0ccc29dca3179b71117",
+      "count": 146,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "df": {
+      "file": "sprite-df.webp",
+      "signature": "3fc043b75f979180afcc3939db3f44520856bb9ba6a3ef41bf956ac60c94a4ae",
+      "count": 169,
+      "columns": 16,
+      "rows": 11,
+      "failures": 0
+    },
+    "e0": {
+      "file": "sprite-e0.webp",
+      "signature": "2378e9afcadc3701aedd41ce5cf2e99dc393b6c51ed1f567b49ede34e4680c93",
+      "count": 140,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "e1": {
+      "file": "sprite-e1.webp",
+      "signature": "f8acdfdc01c7bcdadb4276d8f2f0100cee7898ac65afb29a1e1c50bdeaaacced",
+      "count": 145,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "e2": {
+      "file": "sprite-e2.webp",
+      "signature": "c89541299200e09e0ac638db2289e20682321a227ca5ba7d27bcb5da64c0ebd2",
+      "count": 120,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "e3": {
+      "file": "sprite-e3.webp",
+      "signature": "d1967ca0901176c53dbb0e7df18792f03b8fdc4909252200bab493cda39ffa1e",
+      "count": 137,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "e4": {
+      "file": "sprite-e4.webp",
+      "signature": "b853577123d31ed873e4d0633274721b1affbaca2ddf8155a9531fe190c1f3b3",
+      "count": 168,
+      "columns": 16,
+      "rows": 11,
+      "failures": 0
+    },
+    "e5": {
+      "file": "sprite-e5.webp",
+      "signature": "3a96c15e300563616537d2bc54f8dbcd1b46a5c4d720af7cd27d93b1a624f5e1",
+      "count": 129,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "e6": {
+      "file": "sprite-e6.webp",
+      "signature": "056167c136dac6f179caacfc6133032d70035c960f3a0edf438e6ebb847a68b0",
+      "count": 143,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "e7": {
+      "file": "sprite-e7.webp",
+      "signature": "28c5b3f296471a6b053d4d1f0e39240f33c998e9f5cc2fc94e889fbff7c6f34b",
+      "count": 134,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "e8": {
+      "file": "sprite-e8.webp",
+      "signature": "37ae8e951ff42d167b4f87a6d11eac59604b26a27ede171ea75b7021700b4ecd",
+      "count": 162,
+      "columns": 16,
+      "rows": 11,
+      "failures": 0
+    },
+    "e9": {
+      "file": "sprite-e9.webp",
+      "signature": "d6553103815454bb6d3cf2b9732bc33b111d16cb0a6d811f7b4ae2696d38af7f",
+      "count": 134,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "ea": {
+      "file": "sprite-ea.webp",
+      "signature": "a531a85608c08ef0daf092fdf91f5434df1f46f3f5e42ec2b8c5f58335b22bb8",
+      "count": 127,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "eb": {
+      "file": "sprite-eb.webp",
+      "signature": "2e28fc539e4f021697ba991d01163cfa11bac5689f1d3a1b6e13ebce6fc771e5",
+      "count": 114,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "ec": {
+      "file": "sprite-ec.webp",
+      "signature": "5dc6ebc53c6e9818fe848e0454932b6a2fe306909dd87bcb9f58af31d2cc9ae1",
+      "count": 117,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "ed": {
+      "file": "sprite-ed.webp",
+      "signature": "b69e8afcc3c5315577f0f6a482f455368c7f292414f902ccf62e72aea36006de",
+      "count": 138,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "ee": {
+      "file": "sprite-ee.webp",
+      "signature": "9c7421ac88ea6e28f9e1724e124ddd7b0783d5d372250fda7b799ee4255299d3",
+      "count": 130,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "ef": {
+      "file": "sprite-ef.webp",
+      "signature": "c116880a7df4fff12c27b995fe5e3f846ef74787f01189504d98075a16f05fc0",
+      "count": 146,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "f0": {
+      "file": "sprite-f0.webp",
+      "signature": "b1e6bda85ba05f96d377e4571d74aef33b82e7a3c0a91534c991ffd88f94c419",
+      "count": 128,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "f1": {
+      "file": "sprite-f1.webp",
+      "signature": "fc2bf3c7f0a014a981412435b99cfe6ed66d43223034283e6ef732e1a460eaca",
+      "count": 127,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "f2": {
+      "file": "sprite-f2.webp",
+      "signature": "7f3b8272f91d02f749fd7a6475f9136d1b6cbfca72ecd3aa240a03e2a54ccaae",
+      "count": 137,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "f3": {
+      "file": "sprite-f3.webp",
+      "signature": "4a5c5761a53b8141f5554ca9ea964341503cce4a8bb4bc2a18ae0c4635b3c75e",
+      "count": 124,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "f4": {
+      "file": "sprite-f4.webp",
+      "signature": "fd5756a4f8abb0d0deb725a1d5783c998233e6b4f2dd5f4261a28e4d3a3f3e56",
+      "count": 129,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "f5": {
+      "file": "sprite-f5.webp",
+      "signature": "e1ecf47740ca85df3e5d17fa27bbb64f2def889343839572e066fd218a6c23d2",
+      "count": 128,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "f6": {
+      "file": "sprite-f6.webp",
+      "signature": "de001ae3866e18a50f34da5a442451b032d0c0decabc082b0ddd34b65af1b911",
+      "count": 145,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "f7": {
+      "file": "sprite-f7.webp",
+      "signature": "1905d08bd5a06dc9f28c68aef61819743694c31f43884661608bf29b6320ce54",
+      "count": 135,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "f8": {
+      "file": "sprite-f8.webp",
+      "signature": "d2279450dcdfa68bb241477bd68bae95e388e3af72276b25e983e53dfe598ae0",
+      "count": 132,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "f9": {
+      "file": "sprite-f9.webp",
+      "signature": "48311acaa45e4d92a6b24389ddf61a65059905096df3781b1e3540fc84a3aa9d",
+      "count": 131,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "fa": {
+      "file": "sprite-fa.webp",
+      "signature": "c4760306bd5f0f8f855914797bd9122ba9ac44c440a11ab4f27fe26bfb2caba7",
+      "count": 119,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "fb": {
+      "file": "sprite-fb.webp",
+      "signature": "877a7d6daa77492f52d6d2629f20a1bb18dcdc4b7054b7b05c6d6391fbcb0517",
+      "count": 153,
+      "columns": 16,
+      "rows": 10,
+      "failures": 0
+    },
+    "fc": {
+      "file": "sprite-fc.webp",
+      "signature": "acfd8b6a42dee67b9d03ada0ed1fbeb428ef26a8ddffcc28956a29d2372da495",
+      "count": 139,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    },
+    "fd": {
+      "file": "sprite-fd.webp",
+      "signature": "537b5f486a99f4f8d041b3c34a139c95a4cbde5bd9219ed523e047a2fbf6b89f",
+      "count": 126,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "fe": {
+      "file": "sprite-fe.webp",
+      "signature": "121d0c4079e401b5ba20f3400532e746564c62ea675e4827c0b14311b858fc7b",
+      "count": 122,
+      "columns": 16,
+      "rows": 8,
+      "failures": 0
+    },
+    "ff": {
+      "file": "sprite-ff.webp",
+      "signature": "fab7b6560ff0e68f6db7da1be94a03231306f4a7028f41057c9afb6fbe771d1d",
+      "count": 132,
+      "columns": 16,
+      "rows": 9,
+      "failures": 0
+    }
+  }
+}

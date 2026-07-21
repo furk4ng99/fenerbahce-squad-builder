@@ -14,7 +14,6 @@ const headers = lines[0].split(',');
 // Find column indices
 const idIdx = headers.indexOf('player_id');
 const nameIdx = headers.indexOf('player_name');
-const imageIdx = headers.indexOf('player_image_url');
 const detailedPositionIdx = headers.indexOf('position');
 const positionIdx = headers.indexOf('main_position');
 const clubIdIdx = headers.indexOf('current_club_id');
@@ -73,7 +72,6 @@ for (let i = 1; i < lines.length; i++) {
 
     const playerId = fields[idIdx];
     let playerName = fields[nameIdx] || '';
-    const playerImage = fields[imageIdx] || '';
     const detailedPosition = fields[detailedPositionIdx] || '';
     const mainPosition = fields[positionIdx] || 'Midfield';
     const clubName = fields[clubNameIdx] || '';
@@ -92,7 +90,6 @@ for (let i = 1; i < lines.length; i++) {
         position: position,
         rating: 75, // Default rating
         value: 0,
-        image: playerImage || 'https://img.a.transfermarkt.technology/portrait/header/default.jpg',
         club: clubName
     });
 }

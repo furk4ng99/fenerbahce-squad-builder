@@ -6,8 +6,14 @@
       "position": "GK",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/header/238223-1713391842.jpg",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-12.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 12,
+        "row": 4,
+        "columns": 16,
+        "rows": 9
+      }
     },
     {
       "id": "286170",
@@ -15,8 +21,14 @@
       "position": "GK",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/header/286170-1752478061.jpg",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-0c.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 0,
+        "row": 2,
+        "columns": 16,
+        "rows": 10
+      }
     },
     {
       "id": "51894",
@@ -24,8 +36,14 @@
       "position": "GK",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/header/51894-1727355668.png",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-54.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 0,
+        "row": 4,
+        "columns": 16,
+        "rows": 9
+      }
     },
     {
       "id": "323910",
@@ -33,8 +51,14 @@
       "position": "LB",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/big/323910-1730843589.jpg?lm=1",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-1b.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 11,
+        "row": 6,
+        "columns": 16,
+        "rows": 9
+      }
     },
     {
       "id": "591361",
@@ -42,8 +66,14 @@
       "position": "LB",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/big/591361-1728392223.JPG?lm=1",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-6f.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 7,
+        "row": 5,
+        "columns": 16,
+        "rows": 8
+      }
     },
     {
       "id": "204069",
@@ -51,8 +81,14 @@
       "position": "CB",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/header/204069-1738665259.png",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-4a.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 4,
+        "row": 6,
+        "columns": 16,
+        "rows": 9
+      }
     },
     {
       "id": "320141",
@@ -60,8 +96,14 @@
       "position": "CB",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/header/320141-1728391611.JPG?lm=1",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-a0.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 7,
+        "row": 8,
+        "columns": 16,
+        "rows": 10
+      }
     },
     {
       "id": "889136",
@@ -69,8 +111,14 @@
       "position": "CB",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/header/889136-1750150628.jpg",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-d2.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 3,
+        "row": 1,
+        "columns": 16,
+        "rows": 9
+      }
     },
     {
       "id": "581329",
@@ -78,8 +126,14 @@
       "position": "LB",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/header/581329-1691840592.jpg",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-75.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 9,
+        "row": 0,
+        "columns": 16,
+        "rows": 9
+      }
     },
     {
       "id": "388820",
@@ -87,8 +141,14 @@
       "position": "LB",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/header/388820-1695219229.png",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-aa.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 7,
+        "row": 2,
+        "columns": 16,
+        "rows": 9
+      }
     },
     {
       "id": "231572",
@@ -96,8 +156,14 @@
       "position": "RB",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/header/231572-1684487147.jpg",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-9c.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 15,
+        "row": 2,
+        "columns": 16,
+        "rows": 10
+      }
     },
     {
       "id": "353922",
@@ -105,8 +171,14 @@
       "position": "RB",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/header/353922-1728391929.JPG",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-5a.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 6,
+        "row": 2,
+        "columns": 16,
+        "rows": 9
+      }
     },
     {
       "id": "401356",
@@ -114,8 +186,14 @@
       "position": "CDM",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/header/401356-1742822886.jpg",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-2e.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 12,
+        "row": 3,
+        "columns": 16,
+        "rows": 9
+      }
     },
     {
       "id": "613725",
@@ -123,8 +201,14 @@
       "position": "CDM",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/header/613725-1728391640.JPG",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-55.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 13,
+        "row": 2,
+        "columns": 16,
+        "rows": 10
+      }
     },
     {
       "id": "225083",
@@ -132,8 +216,14 @@
       "position": "CDM",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/big/225083-1703279938.png?lm=1",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-ab.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 13,
+        "row": 0,
+        "columns": 16,
+        "rows": 9
+      }
     },
     {
       "id": "465830",
@@ -141,8 +231,14 @@
       "position": "CM",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/header/465830-1730125468.jpg",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-fe.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 13,
+        "row": 0,
+        "columns": 16,
+        "rows": 8
+      }
     },
     {
       "id": "191614",
@@ -150,8 +246,14 @@
       "position": "CM",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/header/191614-1728391871.JPG",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-e3.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 14,
+        "row": 3,
+        "columns": 16,
+        "rows": 9
+      }
     },
     {
       "id": "1133732",
@@ -159,7 +261,6 @@
       "position": "CDM",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/header/default.jpg",
       "club": "Fenerbahce"
     },
     {
@@ -168,8 +269,14 @@
       "position": "CAM",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/header/296622-1752151998.jpg",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-c4.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 15,
+        "row": 2,
+        "columns": 16,
+        "rows": 9
+      }
     },
     {
       "id": "306462",
@@ -177,7 +284,6 @@
       "position": "CM",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/header/306462-1728391793.JPG",
       "club": "Fenerbahce"
     },
     {
@@ -186,8 +292,14 @@
       "position": "LW",
       "rating": 75,
       "value": 0,
-      "image": "https://b.fssta.com/uploads/application/soccer/headshots/39894.vresize.350.350.medium.1.png",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-4f.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 13,
+        "row": 4,
+        "columns": 16,
+        "rows": 8
+      }
     },
     {
       "id": "563749",
@@ -195,8 +307,14 @@
       "position": "LW",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/big/563749-1728392736.JPG?lm=1",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-e1.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 5,
+        "row": 3,
+        "columns": 16,
+        "rows": 10
+      }
     },
     {
       "id": "671591",
@@ -204,8 +322,14 @@
       "position": "RW",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/header/671591-1754993214.png",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-9b.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 1,
+        "row": 5,
+        "columns": 16,
+        "rows": 10
+      }
     },
     {
       "id": "511401",
@@ -213,8 +337,14 @@
       "position": "RW",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/header/511401-1752478235.jpg",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-95.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 8,
+        "row": 5,
+        "columns": 16,
+        "rows": 9
+      }
     },
     {
       "id": "283223",
@@ -222,8 +352,14 @@
       "position": "RW",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/header/283223-1712157441.png",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-f0.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 3,
+        "row": 7,
+        "columns": 16,
+        "rows": 8
+      }
     },
     {
       "id": "258626",
@@ -231,8 +367,14 @@
       "position": "ST",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/header/258626-1738664288.jpg",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-c1.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 1,
+        "row": 5,
+        "columns": 16,
+        "rows": 9
+      }
     },
     {
       "id": "986288",
@@ -240,8 +382,14 @@
       "position": "ST",
       "rating": 75,
       "value": 0,
-      "image": "https://img.a.transfermarkt.technology/portrait/header/986288-1750956854.png",
-      "club": "Fenerbahce"
+      "image": "/player-images/sprite-e6.webp",
+      "club": "Fenerbahce",
+      "imageSprite": {
+        "column": 11,
+        "row": 0,
+        "columns": 16,
+        "rows": 9
+      }
     }
   ]
 }

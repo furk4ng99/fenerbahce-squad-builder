@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useMemo, useEffect } from "react";
-import { players } from "@/data/players";
 import { Player, Position } from "@/types";
 import PlayerCard from "./PlayerCard";
 import { Search, X, Trash2 } from "lucide-react";
@@ -132,9 +131,9 @@ export default function PlayerSelector({
         // When searching globally (3+ chars), include global players
         let source: Player[];
         if (isGlobalSearch) {
-            source = [...players, ...apiPlayers, ...globalPlayers];
+            source = [...apiPlayers, ...globalPlayers];
         } else if (hasSearchTerm) {
-            source = [...players, ...apiPlayers];
+            source = [...apiPlayers];
         } else {
             source = [...apiPlayers];
         }
