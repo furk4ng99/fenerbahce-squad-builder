@@ -11,6 +11,33 @@ interface ShareButtonProps {
     targetRef: RefObject<HTMLElement>;
 }
 
+const canvasToPngBlob = (canvas: HTMLCanvasElement): Promise<Blob> => {
+    return new Promise((resolve, reject) => {
+        canvas.toBlob((blob) => {
+            if (blob) {
+                resolve(blob);
+                return;
+            }
+
+            reject(new Error("PNG blob could not be created"));
+        }, "image/png");
+    });
+};
+
+const downloadBlob = (blob: Blob, filename: string) => {
+    const objectUrl = URL.createObjectURL(blob);
+    const link = document.createElement("a");
+
+    link.href = objectUrl;
+    link.download = filename;
+    link.style.display = "none";
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+
+    window.setTimeout(() => URL.revokeObjectURL(objectUrl), 1000);
+};
+
 export function ShareButton({ targetRef }: ShareButtonProps) {
     const [isGenerating, setIsGenerating] = useState(false);
     const [isCopying, setIsCopying] = useState(false);
@@ -163,21 +190,17 @@ export function ShareButton({ targetRef }: ShareButtonProps) {
             // 4. Generate canvas
             const canvas = await html2canvas(element, {
                 backgroundColor: null,
-                scale: window.devicePixelRatio || 2, // Retina quality
+                scale: Math.min(window.devicePixelRatio || 2, 2), // Limit mobile memory usage
                 logging: false,
                 useCORS: true, // Critical for iOS
                 allowTaint: false, // Critical for iOS
-                imageTimeout: 0, // Wait indefinitely for images
+                imageTimeout: 15000,
                 scrollX: 0,
                 scrollY: 0,
                 ignoreElements: (element) => {
                     return element.hasAttribute("data-html2canvas-ignore");
                 },
             });
-            // 5. Trigger Download
-            const image = canvas.toDataURL("image/png");
-            const link = document.createElement("a");
-            link.href = image;
 
             // Generate filename
             const turkishMap: Record<string, string> = {
@@ -193,8 +216,35 @@ export function ShareButton({ targetRef }: ShareButtonProps) {
                 .replace(/^-+|-+$/g, "");
 
             const filename = normalizedName ? `fener_ajans_kadro_${normalizedName}.png` : "fener_ajans_kadro.png";
-            link.download = filename;
-            link.click();
+            const blob = await canvasToPngBlob(canvas);
+            const file = new File([blob], filename, { type: "image/png" });
+            const canShareFile = typeof navigator.share === "function"
+                && typeof navigator.canShare === "function"
+                && navigator.canShare({ files: [file] });
+
+            // Native share is the most reliable way to save an asynchronously
+            // generated image on iOS and other mobile browsers.
+            if (canShareFile) {
+                try {
+                    await navigator.share({
+                        files: [file],
+                        title: squadName?.trim() || "Fenerbahçe Kadrosu",
+                    });
+                    showToast("Kadro görseli paylaşıma hazır", "success");
+                    return;
+                } catch (shareError) {
+                    if (shareError instanceof DOMException && shareError.name === "AbortError") {
+                        return;
+                    }
+
+                    console.warn("Native share failed, falling back to download:", shareError);
+                }
+            }
+
+            // Blob URLs avoid the large data URL and detached-link behavior
+            // that mobile browsers can silently reject.
+            downloadBlob(blob, filename);
+            showToast("Kadro görseli indirildi", "success");
 
         } catch (error) {
             console.error("Error generating squad image:", error);
