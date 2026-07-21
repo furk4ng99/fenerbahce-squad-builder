@@ -9,6 +9,12 @@ export interface Player {
     value: number;
     rating: number;
     image?: string;
+    imageSprite?: {
+        column: number;
+        row: number;
+        columns: number;
+        rows: number;
+    };
 }
 
 export interface SquadPlayer extends Player {

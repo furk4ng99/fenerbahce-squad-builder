@@ -33,6 +33,17 @@ A modern, responsive web application for Fenerbahçe fans to build their dream s
     npm run dev
     ```
 
+    Global player portraits are stored locally as WebP sprite sheets. To rebuild
+    them from the source CSV URLs, run:
+
+    ```bash
+    npm run players:generate
+    ```
+
+    This command regenerates the player data, deduplicates the source image URLs,
+    resumes from completed sprite buckets, and updates both player JSON files to
+    use `/player-images/` paths.
+
 3.  **Open the app**:
     Navigate to [http://localhost:3000](http://localhost:3000).
 

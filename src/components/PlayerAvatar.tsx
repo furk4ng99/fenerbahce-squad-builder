@@ -4,6 +4,12 @@ import { cn } from "@/lib/utils";
 
 interface PlayerAvatarProps {
     imageUrl?: string;
+    imageSprite?: {
+        column: number;
+        row: number;
+        columns: number;
+        rows: number;
+    };
     name: string;
     className?: string;
     size?: "sm" | "md" | "lg" | "xl";
@@ -13,27 +19,19 @@ interface PlayerAvatarProps {
 
 export function PlayerAvatar({
     imageUrl,
+    imageSprite,
     name,
     className,
     size = "md",
     showName = true,
     variant = "default"
 }: PlayerAvatarProps) {
-    // Helper to get proxy URL
-    const getProxiedUrl = (url?: string) => {
-        if (!url) return undefined;
-        if (url.startsWith('data:') || url.startsWith('/') || url.includes('wsrv.nl')) return url;
-        return `https://wsrv.nl/?url=${encodeURIComponent(url)}&w=200&h=200&fit=cover`;
-    };
-
     const [imageError, setImageError] = useState(false);
-    const [currentSrc, setCurrentSrc] = useState(getProxiedUrl(imageUrl));
 
     // Reset state when imageUrl changes
     useEffect(() => {
-        setCurrentSrc(getProxiedUrl(imageUrl));
         setImageError(false);
-    }, [imageUrl]);
+    }, [imageUrl, imageSprite]);
 
     // Size mappings
     const sizeClasses = {
@@ -50,12 +48,27 @@ export function PlayerAvatar({
                 "relative rounded-full overflow-hidden border-[3px] border-white shadow-lg bg-gray-200 flex items-center justify-center shrink-0",
                 sizeClasses[size]
             )}>
-                {imageUrl && !imageError ? (
+                {imageUrl && imageSprite && !imageError ? (
+                    <div
+                        role="img"
+                        aria-label={name}
+                        className="w-full h-full bg-no-repeat"
+                        style={{
+                            backgroundImage: `url(${imageUrl})`,
+                            backgroundSize: `${imageSprite.columns * 100}% ${imageSprite.rows * 100}%`,
+                            backgroundPositionX: imageSprite.columns === 1
+                                ? "0%"
+                                : `${(imageSprite.column / (imageSprite.columns - 1)) * 100}%`,
+                            backgroundPositionY: imageSprite.rows === 1
+                                ? "0%"
+                                : `${(imageSprite.row / (imageSprite.rows - 1)) * 100}%`,
+                        }}
+                    />
+                ) : imageUrl && !imageError ? (
                     <img
-                        src={currentSrc}
+                        src={imageUrl}
                         alt={name}
                         className="w-full h-full object-cover"
-                        crossOrigin={currentSrc?.startsWith('/') ? undefined : "anonymous"}
                         onError={() => setImageError(true)}
                     />
                 ) : (

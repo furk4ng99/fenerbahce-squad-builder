@@ -42,6 +42,7 @@ export default function PlayerCard({
             <div className="flex-1 flex flex-col items-center justify-center w-full">
                 <PlayerAvatar
                     imageUrl={player.image}
+                    imageSprite={player.imageSprite}
                     name={player.name}
                     size="md"
                     variant="card"

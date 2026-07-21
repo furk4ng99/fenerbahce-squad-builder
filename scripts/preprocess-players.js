@@ -67,7 +67,6 @@ Papa.parse(fileContent, {
                 position: mapPosition(p.position),
                 rating: 75, // Default rating
                 value: parseCurrency(p.market_value_in_eur),
-                image: p.player_image_url || "https://via.placeholder.com/150",
                 club: p.current_club_name
             };
         });

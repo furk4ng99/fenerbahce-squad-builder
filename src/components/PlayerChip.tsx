@@ -66,6 +66,7 @@ export default function PlayerChip({
                 ) : (
                     <PlayerAvatar
                         imageUrl={player.image}
+                        imageSprite={player.imageSprite}
                         name={player.name}
                         size={size === "sm" ? "sm" : "md"}
                         variant="default"
