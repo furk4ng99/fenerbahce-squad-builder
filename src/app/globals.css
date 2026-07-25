@@ -3,26 +3,52 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: 245, 247, 251;
+  --background-start-rgb: 6, 16, 28;
+  --background-end-rgb: 4, 11, 20;
+  color-scheme: dark;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 45, 114;
-    /* #002d72 */
-    --background-end-rgb: 0, 31, 77;
-    /* #001f4d */
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #06101c;
+  scroll-behavior: smooth;
 }
 
 body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background:
+    radial-gradient(circle at 80% -10%, rgba(247, 232, 28, 0.06), transparent 28rem),
+    linear-gradient(180deg, rgb(var(--background-start-rgb)), rgb(var(--background-end-rgb)));
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  color: #07101c;
+  background: #f7e81c;
 }
 
 /* Glassmorphism Card */
@@ -129,19 +155,17 @@ body {
   }
 }
 
-/* Confetti Animation */
-@keyframes confetti-fall {
-  0% {
-    transform: translateY(-10vh) rotate(0deg);
-    opacity: 1;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 
-  100% {
-    transform: translateY(100vh) rotate(720deg);
-    opacity: 0;
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
-}
-
-.confetti {
-  animation: confetti-fall linear infinite;
 }
