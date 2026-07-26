@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
 import { Bebas_Neue, Roboto_Condensed, Teko } from "next/font/google";
 import "./globals.css";
-import Link from "next/link";
-import ClientLayout from "@/components/ClientLayout";
 import { Analytics } from "@vercel/analytics/next";
-
+import SiteChrome from "@/components/SiteChrome";
 
 const bebasNeue = Bebas_Neue({
   weight: "400",
@@ -24,29 +22,32 @@ const teko = Teko({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://fenerajans.com'),
-  title: "Fener Ajans - 2025 Süper Kupa Şampiyonu Fenerbahçe",
-  description: "Hayalinizdeki Fenerbahçe kadrosunu oluşturun. 2025 Turkcell Süper Kupa Şampiyonu!",
+  title: {
+    default: "Fener Ajans | Oyun ve Taktik Stüdyosu",
+    template: "%s | Fener Ajans",
+  },
+  description: "Kadro kurun, oyun planınızı şekillendirin ve Fenerbahçe efsanelerini karşılaştırın.",
   icons: {
     icon: '/bull-icon.png',
   },
   openGraph: {
-    title: "Fener Ajans - 2025 Süper Kupa Şampiyonu",
-    description: "Fenerbahçe 2025 Turkcell Süper Kupa Şampiyonu! Galatasaray 0-2 Fenerbahçe",
+    title: "Fener Ajans | Oyun ve Taktik Stüdyosu",
+    description: "Futbol fikirlerini sahaya taşıyan modern kadro ve taktik deneyimi.",
     images: [
       {
-        url: '/assets/superkupa-2025-sampiyon.jpg',
-        width: 800,
-        height: 1000,
-        alt: 'Fenerbahçe 2025 Turkcell Süper Kupa Şampiyonu',
+        url: "/og.png",
+        width: 1731,
+        height: 909,
+        alt: "Fener Ajans — Kadro değil, oyun fikri kur.",
       },
     ],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Fener Ajans - 2025 Süper Kupa Şampiyonu",
-    description: "Fenerbahçe 2025 Turkcell Süper Kupa Şampiyonu! Galatasaray 0-2 Fenerbahçe",
-    images: ['/assets/superkupa-2025-sampiyon.jpg'],
+    title: "Fener Ajans | Oyun ve Taktik Stüdyosu",
+    description: "Futbol fikirlerini sahaya taşıyan modern kadro ve taktik deneyimi.",
+    images: ["/og.png"],
   },
 };
 
@@ -58,51 +59,7 @@ export default function RootLayout({
   return (
     <html lang="tr" className={`${bebasNeue.variable} ${robotoCondensed.variable} ${teko.variable}`}>
       <body className={robotoCondensed.className}>
-        <ClientLayout>
-          <div className="min-h-screen flex flex-col relative">
-            <header className="bg-fb-navy/95 backdrop-blur-sm text-white shadow-lg relative z-10 border-b border-white/5">
-              <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-                <Link href="/" className="flex items-center gap-2 md:gap-3 hover:opacity-90 transition-opacity group">
-                  {/* Logo */}
-                  <div className="relative h-8 md:h-10 w-auto">
-                    <img
-                      src="/bull-icon.png"
-                      alt="Fener Ajans"
-                      className="h-full w-auto object-contain"
-                    />
-                  </div>
-                  {/* Text Label - Hidden on very small screens if needed, but user said "if needed" */}
-                  <span className="text-white font-bold text-sm md:text-lg tracking-wide hidden sm:block font-bebas pt-1">
-                    FENER AJANS
-                  </span>
-                </Link>
-
-                <nav className="hidden md:flex space-x-6 items-center">
-                  <Link href="/kadro-olusturucu" className="hover:text-fb-yellow transition-colors font-bold tracking-wide">KADRO OLUŞTUR</Link>
-                  <Link href="/duel" className="hover:text-fb-yellow transition-colors font-bold tracking-wide">DÜELLO ARENASI</Link>
-                  <Link href="/tournament" className="hover:text-fb-yellow transition-colors font-bold tracking-wide">TURNUVA</Link>
-                </nav>
-              </div>
-            </header>
-            <main className="flex-grow relative z-10">
-              {children}
-            </main>
-            <footer className="bg-fb-navy/95 backdrop-blur-sm text-white py-6 mt-auto relative z-10 border-t border-white/5">
-              <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-4">
-                <div className="flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
-                  <img
-                    src="/bull-icon.png"
-                    alt="Fener Ajans"
-                    className="h-6 w-auto object-contain"
-                  />
-                  <span className="text-xs text-white/80">© 2025 Fener Ajans – Tüm hakları saklıdır.</span>
-                </div>
-
-
-              </div>
-            </footer>
-          </div>
-        </ClientLayout>
+        <SiteChrome>{children}</SiteChrome>
         <Analytics />
       </body>
     </html>
